@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>News Context Public Pages</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f6f0e7;
+        --card: #fffaf2;
+        --ink: #172033;
+        --muted: #52607a;
+        --border: #d7c8b4;
+        --accent: #b1441d;
+        --accent-strong: #8f3212;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Georgia, "Times New Roman", serif;
+        background:
+          radial-gradient(circle at top left, rgba(177, 68, 29, 0.14), transparent 28%),
+          linear-gradient(180deg, #fbf7f0 0%, var(--bg) 100%);
+        color: var(--ink);
+      }
+
+      main {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 56px 20px 80px;
+      }
+
+      .eyebrow {
+        margin: 0 0 10px;
+        font: 700 12px/1.2 ui-monospace, SFMono-Regular, Consolas, monospace;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--accent-strong);
+      }
+
+      h1 {
+        margin: 0 0 16px;
+        font-size: clamp(2.2rem, 5vw, 3.5rem);
+        line-height: 1.03;
+      }
+
+      .lede {
+        max-width: 680px;
+        margin: 0 0 28px;
+        font-size: 1.1rem;
+        line-height: 1.7;
+        color: var(--muted);
+      }
+
+      .grid {
+        display: grid;
+        gap: 18px;
+      }
+
+      .card {
+        padding: 24px;
+        border: 1px solid var(--border);
+        border-radius: 22px;
+        background: var(--card);
+        box-shadow: 0 10px 24px rgba(23, 32, 51, 0.06);
+      }
+
+      .card h2 {
+        margin: 0 0 10px;
+        font-size: 1.35rem;
+      }
+
+      .card p {
+        margin: 0 0 16px;
+        color: var(--muted);
+        line-height: 1.7;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 42px;
+        padding: 0 16px;
+        border-radius: 999px;
+        border: 1px solid var(--accent);
+        background: var(--accent);
+        color: #fff;
+        text-decoration: none;
+        font: 700 14px/1.1 ui-sans-serif, system-ui, sans-serif;
+      }
+
+      .button.secondary {
+        background: transparent;
+        color: var(--accent-strong);
+      }
+
+      code {
+        padding: 0.1rem 0.35rem;
+        border-radius: 6px;
+        background: rgba(23, 32, 51, 0.06);
+        font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p class="eyebrow">News Context</p>
+      <h1>Public Pages For Chrome Web Store Submission</h1>
+      <p class="lede">
+        This directory is ready to publish through GitHub Pages. Once <code>docs/</code> is enabled
+        as the Pages source, use the public URLs below for
+        <code>STORE_PRIVACY_POLICY_URL</code> and <code>STORE_PUBLIC_CONTACT_URL</code>.
+      </p>
+
+      <section class="grid">
+        <article class="card">
+          <h2>Privacy Policy</h2>
+          <p>Public-facing privacy page for Chrome Web Store reviewers and early alpha users.</p>
+          <div class="actions">
+            <a class="button" href="./privacy-policy.html">Open Privacy Policy</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h2>Public Contact</h2>
+          <p>Public contact route for store listing metadata. A simple public page is enough.</p>
+          <div class="actions">
+            <a class="button" href="./public-contact.html">Open Public Contact</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h2>10-Minute GitHub Pages Setup</h2>
+          <p>Follow the quickstart to publish these pages and wire the resulting URLs into the release flow.</p>
+          <div class="actions">
+            <a class="button secondary" href="./GITHUB_PAGES_QUICKSTART.md">Read Quickstart</a>
+          </div>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
