@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="860" viewBox="0 0 420 860">
+    <rect x="0" y="0" width="420" height="860" fill="white" stroke="black"/>
+    <text x="20" y="30" font-family="Arial" font-size="20" font-weight="bold">WF-01 Onboarding</text>
+    <rect x="20" y="50" width="380" height="40" fill="none" stroke="black"/>
+    <text x="30" y="75" font-family="Arial" font-size="14">Header / Chrome Side Panel</text>
+    
+<rect x="20" y="110" width="380" height="90" fill="none" stroke="black"/><text x="30" y="134" font-family="Arial" font-size="13">Product name + tagline</text>
+<rect x="20" y="220" width="380" height="130" fill="none" stroke="black"/><text x="30" y="244" font-family="Arial" font-size="13">3 value bullets</text>
+<rect x="20" y="370" width="380" height="50" fill="none" stroke="black"/><text x="30" y="394" font-family="Arial" font-size="13">Primary CTA: 현재 기사 비교하기</text>
+<rect x="20" y="440" width="380" height="60" fill="none" stroke="black"/><text x="30" y="464" font-family="Arial" font-size="13">Analytics consent toggle</text>
+<rect x="20" y="520" width="380" height="40" fill="none" stroke="black"/><text x="30" y="544" font-family="Arial" font-size="13">What data is sent? link</text>
+<rect x="20" y="580" width="380" height="80" fill="none" stroke="black"/><text x="30" y="604" font-family="Arial" font-size="13">Legal disclaimer / privacy note</text>
+</svg>

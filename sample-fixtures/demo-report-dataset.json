@@ -1,0 +1,526 @@
+{
+  "schema_version": 1,
+  "dataset_name": "demo-report-closer-live-corpus",
+  "description": "Deterministic closer-to-live demo dataset for sample issue reports, daily briefing scaffolds, and B2B starter packs. This fixture stays separate from the resolve benchmark so operational exports can become more credible for pilot meetings without changing ranking budgets.",
+  "generated_at": "2026-04-12T10:05:00.000+09:00",
+  "budgets": {
+    "target_p95_latency_ms": 2500,
+    "min_precision_at_5": 0.8,
+    "candidate_time_window_hours": 72,
+    "min_related_articles": 3,
+    "max_related_articles": 5
+  },
+  "cases": [
+    {
+      "case_id": "demo-001-semiconductor-export-license-review",
+      "source_fixture_case_id": "naver-001-jsonld-complete",
+      "description": "Primary meeting anchor issue with clear publisher diversity, numeric overlap, and a more newsroom-like update arc that moves from customs delays to overnight mitigation steps and follow-on logistics response.",
+      "request": {
+        "url": "https://demo.news/reports/semiconductor-license-001",
+        "canonical_url": "https://demo.news/reports/semiconductor-license-001",
+        "title": "Seoul task force opens semiconductor export license review after customs backlog",
+        "publisher_name": "Seoul Market Desk",
+        "author_names": ["Hyejin Lee"],
+        "published_at": "2026-04-10T00:20:00.000Z",
+        "modified_at": "2026-04-10T00:45:00.000Z",
+        "article_type": "news",
+        "section": "economy",
+        "keywords": [
+          "semiconductor export",
+          "license review",
+          "customs backlog",
+          "task force"
+        ],
+        "body_excerpt": "Seoul launched a semiconductor export license task force after 12 cargo lots stalled, three emergency reviews were requested, and the customs queue stretched to 48 hours.",
+        "correction_note_detected": false,
+        "parse_confidence": 0.97,
+        "anon_id": "anon-demo-semi-001",
+        "page_lang": "ko"
+      },
+      "candidate_pool": [
+        {
+          "article_id": "demo-semi-001",
+          "url": "https://wire-korea.example/economy/semiconductor/001",
+          "publisher_name": "Wire Korea",
+          "title": "Seoul task force starts overnight semiconductor export license review after customs backlog",
+          "published_at": "2026-04-10T00:35:00.000Z",
+          "summary_line": "Officials started an overnight semiconductor export license review after 12 cargo lots stalled in customs and the backlog stretched toward 48 hours.",
+          "expected_relevance": "relevant",
+          "expected_rank": 1
+        },
+        {
+          "article_id": "demo-semi-002",
+          "url": "https://market-insight.example/economy/semiconductor/002",
+          "publisher_name": "Market Insight",
+          "title": "Chipmakers request semiconductor export license review as Seoul customs backlog grows",
+          "published_at": "2026-04-10T01:05:00.000Z",
+          "summary_line": "Chipmakers asked for three emergency license reviews after the semiconductor export queue grew beyond a 48 hour backlog.",
+          "expected_relevance": "relevant",
+          "expected_rank": 2
+        },
+        {
+          "article_id": "demo-semi-003",
+          "url": "https://industry-ledger.example/economy/semiconductor/003",
+          "publisher_name": "Industry Ledger",
+          "title": "Customs adds night desk to semiconductor export license backlog",
+          "published_at": "2026-04-10T01:35:00.000Z",
+          "summary_line": "Customs added a night desk to the semiconductor export license backlog after 12 lots remained stuck in queue.",
+          "expected_relevance": "relevant",
+          "expected_rank": 3
+        },
+        {
+          "article_id": "demo-semi-004",
+          "url": "https://business-briefing.example/economy/semiconductor/004",
+          "publisher_name": "Capital Briefing",
+          "title": "Seoul maps 48-hour bottlenecks in semiconductor export license backlog",
+          "published_at": "2026-04-10T02:05:00.000Z",
+          "summary_line": "Seoul mapped the 48 hour bottlenecks inside the semiconductor export license backlog after suppliers flagged contract risk.",
+          "expected_relevance": "relevant",
+          "expected_rank": 4
+        },
+        {
+          "article_id": "demo-semi-005",
+          "url": "https://broadcast-economy.example/economy/semiconductor/005",
+          "publisher_name": "Broadcast Economy",
+          "title": "Suppliers warn contract risk if semiconductor export license backlog slips again",
+          "published_at": "2026-04-10T02:45:00.000Z",
+          "summary_line": "Suppliers warned that another round of semiconductor export license delays could extend the 48 hour customs backlog.",
+          "expected_relevance": "relevant",
+          "expected_rank": 5
+        },
+        {
+          "article_id": "demo-semi-006",
+          "url": "https://trade-policy-desk.example/economy/semiconductor/006",
+          "publisher_name": "Trade Policy Desk",
+          "title": "Task force adds bonded-truck audit to semiconductor export license response",
+          "published_at": "2026-04-10T03:10:00.000Z",
+          "summary_line": "The export task force added a bonded-truck audit to the semiconductor export license response after three emergency reviews were requested.",
+          "expected_relevance": "relevant"
+        },
+        {
+          "article_id": "demo-semi-007",
+          "url": "https://regional-industry.example/economy/semiconductor/007",
+          "publisher_name": "Regional Industry",
+          "title": "Regional fabs join semiconductor export license review after 12 stalled lots",
+          "published_at": "2026-04-10T03:50:00.000Z",
+          "summary_line": "Regional fabs joined Seoul's semiconductor export license review push after 12 stalled lots and a customs delay that reached 48 hours.",
+          "expected_relevance": "relevant"
+        },
+        {
+          "article_id": "demo-semi-008",
+          "url": "https://digital-industry-watch.example/economy/semiconductor/008",
+          "publisher_name": "Digital Industry Desk",
+          "title": "Night-shift review team opens as semiconductor export license customs queue widens",
+          "published_at": "2026-04-10T04:20:00.000Z",
+          "summary_line": "A night-shift review team opened as the semiconductor export license customs queue widened beyond the original 12 lot estimate.",
+          "expected_relevance": "relevant"
+        },
+        {
+          "article_id": "demo-semi-009",
+          "url": "https://green-mobility.example/city/009",
+          "publisher_name": "Green Mobility",
+          "title": "City doubles EV charger rebates for apartment parking lots",
+          "published_at": "2026-04-10T01:45:00.000Z",
+          "summary_line": "City hall doubled EV charger rebates for apartment parking lots in older apartment blocks.",
+          "expected_relevance": "distractor"
+        },
+        {
+          "article_id": "demo-semi-010",
+          "url": "https://housing-brief.example/policy/010",
+          "publisher_name": "Housing Brief",
+          "title": "Seoul extends rent-deposit support for first-home buyers",
+          "published_at": "2026-04-10T02:30:00.000Z",
+          "summary_line": "Seoul extended rent-deposit support for first-home buyers through the summer application round.",
+          "expected_relevance": "distractor"
+        }
+      ],
+      "expected": {
+        "state": "success_full",
+        "freshness_state": "fresh",
+        "context_confidence_min": 0.86,
+        "min_related_count": 5,
+        "max_related_count": 5,
+        "relevant_article_ids": [
+          "demo-semi-001",
+          "demo-semi-002",
+          "demo-semi-003",
+          "demo-semi-004",
+          "demo-semi-005",
+          "demo-semi-006",
+          "demo-semi-007",
+          "demo-semi-008"
+        ],
+        "expected_top_article_ids": [
+          "demo-semi-001",
+          "demo-semi-002",
+          "demo-semi-003",
+          "demo-semi-004",
+          "demo-semi-005"
+        ]
+      }
+    },
+    {
+      "case_id": "demo-002-flood-bridge-repair-fund",
+      "source_fixture_case_id": "naver-003-dom-fallback-partial",
+      "description": "Secondary cluster that keeps the briefing grounded in local public-interest reporting and makes the recurring pack look less synthetic.",
+      "request": {
+        "url": "https://demo.news/reports/flood-bridge-002",
+        "canonical_url": "https://demo.news/reports/flood-bridge-002",
+        "title": "South coast bridge repair fund opens after flood isolates 72 households",
+        "publisher_name": "Coast Civic Desk",
+        "author_names": ["Minseo Choi"],
+        "published_at": "2026-04-10T05:10:00.000Z",
+        "article_type": "news",
+        "section": "society",
+        "keywords": [
+          "bridge repair fund",
+          "flood recovery",
+          "south coast",
+          "isolated households"
+        ],
+        "body_excerpt": "The bridge repair fund opened after floods isolated 72 households, left two spans closed, and forced 18 repair crews onto emergency shifts.",
+        "correction_note_detected": false,
+        "parse_confidence": 0.84,
+        "anon_id": "anon-demo-flood-002",
+        "page_lang": "ko"
+      },
+      "candidate_pool": [
+        {
+          "article_id": "demo-flood-001",
+          "url": "https://regional-wire.example/local/flood/001",
+          "publisher_name": "Regional Wire",
+          "title": "South coast repair fund releases first bridge tranche after flood",
+          "published_at": "2026-04-10T05:25:00.000Z",
+          "summary_line": "The repair fund released its first bridge tranche after floods isolated 72 households and closed two spans.",
+          "expected_relevance": "relevant",
+          "expected_rank": 1
+        },
+        {
+          "article_id": "demo-flood-002",
+          "url": "https://south-coast-daily.example/local/flood/002",
+          "publisher_name": "South Coast Daily",
+          "title": "Mayors seek faster flood bridge approvals as 18 crews stay on standby",
+          "published_at": "2026-04-10T05:55:00.000Z",
+          "summary_line": "Mayors said 18 bridge crews are still waiting on flood repair approvals along the south coast corridor.",
+          "expected_relevance": "relevant",
+          "expected_rank": 2
+        },
+        {
+          "article_id": "demo-flood-003",
+          "url": "https://civic-affairs.example/local/flood/003",
+          "publisher_name": "Civic Affairs Desk",
+          "title": "Recovery office tracks 72-hour target for two flood-hit bridges",
+          "published_at": "2026-04-10T06:30:00.000Z",
+          "summary_line": "The recovery office said two flood-hit bridges remain on a 72-hour repair target.",
+          "expected_relevance": "relevant",
+          "expected_rank": 3
+        },
+        {
+          "article_id": "demo-flood-004",
+          "url": "https://metro-journal.example/local/flood/004",
+          "publisher_name": "Metro Journal",
+          "title": "Engineers reopen one span as flood bridge fund expands",
+          "published_at": "2026-04-10T07:05:00.000Z",
+          "summary_line": "Engineers reopened one span as the flood bridge fund expanded to more districts.",
+          "expected_relevance": "relevant",
+          "expected_rank": 4
+        },
+        {
+          "article_id": "demo-flood-005",
+          "url": "https://wire-korea.example/flood/005",
+          "publisher_name": "Public Service Wire",
+          "title": "South coast relief office adds materials audit to bridge repair fund",
+          "published_at": "2026-04-10T07:40:00.000Z",
+          "summary_line": "The relief office added a materials audit to the bridge repair fund after 72 households remained cut off.",
+          "expected_relevance": "relevant",
+          "expected_rank": 5
+        },
+        {
+          "article_id": "demo-flood-006",
+          "url": "https://festival-city.example/local/006",
+          "publisher_name": "Festival City",
+          "title": "Weekend parade reroutes traffic after temporary bridge closures",
+          "published_at": "2026-04-10T06:10:00.000Z",
+          "summary_line": "A weekend parade rerouted traffic after temporary bridge closures downtown.",
+          "expected_relevance": "distractor"
+        },
+        {
+          "article_id": "demo-flood-007",
+          "url": "https://weather-brief.example/weather/007",
+          "publisher_name": "Weather Brief",
+          "title": "Spring rain alert covers south coast through Sunday",
+          "published_at": "2026-04-10T07:20:00.000Z",
+          "summary_line": "Forecasters issued a spring rain alert for coastal districts through Sunday.",
+          "expected_relevance": "distractor"
+        }
+      ],
+      "expected": {
+        "state": "success_partial",
+        "freshness_state": "fresh",
+        "context_confidence_min": 0.74,
+        "min_related_count": 4,
+        "max_related_count": 5,
+        "relevant_article_ids": [
+          "demo-flood-001",
+          "demo-flood-002",
+          "demo-flood-003",
+          "demo-flood-004",
+          "demo-flood-005"
+        ],
+        "expected_top_article_ids": [
+          "demo-flood-001",
+          "demo-flood-002",
+          "demo-flood-003",
+          "demo-flood-004",
+          "demo-flood-005"
+        ]
+      }
+    },
+    {
+      "case_id": "demo-003-dollar-hedge-margin-warning",
+      "source_fixture_case_id": "naver-002-meta-fallback",
+      "description": "Third cluster that keeps the briefing balanced and demonstrates market coverage with a more natural trader, banking, and treasury source mix instead of a single market desk voice.",
+      "request": {
+        "url": "https://demo.news/reports/fx-hedge-003",
+        "canonical_url": "https://demo.news/reports/fx-hedge-003",
+        "title": "Exporters widen dollar hedges after Seoul FX warning on margin squeeze",
+        "publisher_name": "Finance Briefing",
+        "author_names": ["Ara Kim"],
+        "published_at": "2026-04-10T09:10:00.000Z",
+        "article_type": "analysis",
+        "section": "economy",
+        "keywords": [
+          "dollar hedge",
+          "FX warning",
+          "margin squeeze",
+          "90 day reset"
+        ],
+        "body_excerpt": "Exporters widened dollar hedge plans after Seoul's FX warning flagged a 5 percent margin squeeze, 90 day contract resets, and a 1.3 billion dollar exposure review.",
+        "correction_note_detected": false,
+        "parse_confidence": 0.81,
+        "anon_id": "anon-demo-fx-003",
+        "page_lang": "ko"
+      },
+      "candidate_pool": [
+        {
+          "article_id": "demo-fx-001",
+          "url": "https://fx-daily.example/markets/fx/001",
+          "publisher_name": "FX Daily",
+          "title": "Shipbuilders widen dollar hedges after 5 percent margin warning",
+          "published_at": "2026-04-10T09:30:00.000Z",
+          "summary_line": "Shipbuilders widened dollar hedges after the Seoul warning highlighted a 5 percent margin squeeze.",
+          "expected_relevance": "relevant",
+          "expected_rank": 1
+        },
+        {
+          "article_id": "demo-fx-002",
+          "url": "https://market-brief.example/markets/fx/002",
+          "publisher_name": "Market Brief",
+          "title": "Auto exporters rewrite 90 day hedge books after FX warning",
+          "published_at": "2026-04-10T10:00:00.000Z",
+          "summary_line": "Auto exporters said the FX warning forced them to rewrite 90 day hedge books.",
+          "expected_relevance": "relevant",
+          "expected_rank": 2
+        },
+        {
+          "article_id": "demo-fx-003",
+          "url": "https://trade-ledger.example/markets/fx/003",
+          "publisher_name": "Trade Ledger",
+          "title": "Small exporters seek pooled dollar hedge after Seoul FX alert",
+          "published_at": "2026-04-10T10:35:00.000Z",
+          "summary_line": "Small exporters moved toward pooled dollar hedge desks after Seoul flagged a 1.3 billion dollar exposure review.",
+          "expected_relevance": "relevant",
+          "expected_rank": 3
+        },
+        {
+          "article_id": "demo-fx-004",
+          "url": "https://banking-wire.example/markets/fx/004",
+          "publisher_name": "Banking Wire",
+          "title": "Banks quote 5 percent hedge-cost jump after FX warning",
+          "published_at": "2026-04-10T11:10:00.000Z",
+          "summary_line": "Bank desks quoted a 5 percent hedge-cost jump after the FX warning spread through exporter accounts.",
+          "expected_relevance": "relevant",
+          "expected_rank": 4
+        },
+        {
+          "article_id": "demo-fx-005",
+          "url": "https://treasury-monitor.example/markets/fx/005",
+          "publisher_name": "Treasury Monitor",
+          "title": "Treasury teams reopen 90 day review calendar after currency alert",
+          "published_at": "2026-04-10T11:40:00.000Z",
+          "summary_line": "Treasury teams reopened 90 day review calendars after the Seoul currency alert tightened hedge rules.",
+          "expected_relevance": "relevant",
+          "expected_rank": 5
+        },
+        {
+          "article_id": "demo-fx-006",
+          "url": "https://travel-brief.example/travel/006",
+          "publisher_name": "Travel Brief",
+          "title": "Budget airlines add summer dollar fares on Pacific routes",
+          "published_at": "2026-04-10T10:45:00.000Z",
+          "summary_line": "Budget airlines added summer dollar fares for Pacific holiday routes.",
+          "expected_relevance": "distractor"
+        },
+        {
+          "article_id": "demo-fx-007",
+          "url": "https://startup-desk.example/startups/007",
+          "publisher_name": "Startup Desk",
+          "title": "Seed funds warm to export software after hiring rebound",
+          "published_at": "2026-04-10T11:55:00.000Z",
+          "summary_line": "Seed funds warmed to export software after a hiring rebound in the startup market.",
+          "expected_relevance": "distractor"
+        }
+      ],
+      "expected": {
+        "state": "success_partial",
+        "freshness_state": "watch_newer",
+        "context_confidence_min": 0.68,
+        "min_related_count": 4,
+        "max_related_count": 5,
+        "relevant_article_ids": [
+          "demo-fx-001",
+          "demo-fx-002",
+          "demo-fx-003",
+          "demo-fx-004",
+          "demo-fx-005"
+        ],
+        "expected_top_article_ids": [
+          "demo-fx-001",
+          "demo-fx-002",
+          "demo-fx-003",
+          "demo-fx-004",
+          "demo-fx-005"
+        ]
+      }
+    },
+    {
+      "case_id": "demo-004-budget-hearing-tax-dispute",
+      "source_fixture_case_id": "naver-004-multiple-authors",
+      "description": "Large but weaker cluster with low publisher diversity and older timestamps. It exists to prove the sample issue report prefers persuasive meeting anchors over the largest cluster.",
+      "request": {
+        "url": "https://demo.news/reports/budget-hearing-004",
+        "canonical_url": "https://demo.news/reports/budget-hearing-004",
+        "title": "Assembly budget hearing reopens data center tax dispute",
+        "publisher_name": "Policy Brief",
+        "author_names": ["Doyun Han"],
+        "published_at": "2026-04-06T08:15:00.000Z",
+        "modified_at": "2026-04-06T08:40:00.000Z",
+        "article_type": "analysis",
+        "section": "politics",
+        "keywords": [
+          "budget hearing",
+          "data center tax",
+          "committee agenda",
+          "tax dispute"
+        ],
+        "body_excerpt": "A budget hearing reopened the data center tax dispute after two caucus memos and a 14 day delay on the committee agenda.",
+        "correction_note_detected": false,
+        "parse_confidence": 0.8,
+        "anon_id": "anon-demo-budget-004",
+        "page_lang": "ko"
+      },
+      "candidate_pool": [
+        {
+          "article_id": "demo-budget-001",
+          "url": "https://policy-brief.example/politics/budget/001",
+          "publisher_name": "Policy Brief",
+          "title": "Budget hearing reopens data center tax freeze debate",
+          "published_at": "2026-04-06T08:45:00.000Z",
+          "summary_line": "The budget hearing reopened the data center tax freeze debate after a 14 day delay on the committee agenda.",
+          "expected_relevance": "relevant",
+          "expected_rank": 1
+        },
+        {
+          "article_id": "demo-budget-002",
+          "url": "https://assembly-monitor.example/politics/budget/002",
+          "publisher_name": "Assembly Monitor",
+          "title": "Caucus memo keeps data center tax dispute alive in budget session",
+          "published_at": "2026-04-06T09:20:00.000Z",
+          "summary_line": "A caucus memo kept the data center tax dispute alive as the budget session resumed its stalled timetable.",
+          "expected_relevance": "relevant",
+          "expected_rank": 2
+        },
+        {
+          "article_id": "demo-budget-003",
+          "url": "https://policy-brief.example/politics/budget/003",
+          "publisher_name": "Policy Brief",
+          "title": "Budget chair delays data center tax vote for another week",
+          "published_at": "2026-04-06T10:05:00.000Z",
+          "summary_line": "The budget chair delayed the data center tax vote for another week after a narrow procedural dispute inside the committee.",
+          "expected_relevance": "relevant",
+          "expected_rank": 3
+        },
+        {
+          "article_id": "demo-budget-004",
+          "url": "https://assembly-monitor.example/politics/budget/004",
+          "publisher_name": "Assembly Monitor",
+          "title": "Opposition presses budget panel on data center tax timetable",
+          "published_at": "2026-04-06T10:40:00.000Z",
+          "summary_line": "The opposition pressed the budget panel to clarify the data center tax timetable before the next procedural vote.",
+          "expected_relevance": "relevant",
+          "expected_rank": 4
+        },
+        {
+          "article_id": "demo-budget-005",
+          "url": "https://policy-brief.example/politics/budget/005",
+          "publisher_name": "Policy Brief",
+          "title": "Budget hearing keeps two data center tax amendments in play",
+          "published_at": "2026-04-06T11:25:00.000Z",
+          "summary_line": "The budget hearing kept two competing data center tax amendments in play as caucus aides traded revised text.",
+          "expected_relevance": "relevant",
+          "expected_rank": 5
+        },
+        {
+          "article_id": "demo-budget-006",
+          "url": "https://assembly-monitor.example/politics/budget/006",
+          "publisher_name": "Assembly Monitor",
+          "title": "Committee memo extends data center tax dispute into weekend",
+          "published_at": "2026-04-06T12:10:00.000Z",
+          "summary_line": "A committee memo extended the data center tax dispute into the weekend session while negotiators looked for a compromise.",
+          "expected_relevance": "relevant"
+        },
+        {
+          "article_id": "demo-budget-007",
+          "url": "https://policy-brief.example/politics/budget/007",
+          "publisher_name": "Policy Brief",
+          "title": "Budget aides trade new papers on data center tax compromise",
+          "published_at": "2026-04-06T13:00:00.000Z",
+          "summary_line": "Budget aides traded new papers on a possible data center tax compromise before the committee reconvened.",
+          "expected_relevance": "relevant"
+        },
+        {
+          "article_id": "demo-budget-008",
+          "url": "https://education-brief.example/education/008",
+          "publisher_name": "Education Brief",
+          "title": "Universities expand server grants for AI labs",
+          "published_at": "2026-04-06T10:55:00.000Z",
+          "summary_line": "Universities expanded server grants for AI labs after a ministry notice.",
+          "expected_relevance": "distractor"
+        }
+      ],
+      "expected": {
+        "state": "success_full",
+        "freshness_state": "older_context",
+        "context_confidence_min": 0.7,
+        "min_related_count": 5,
+        "max_related_count": 5,
+        "relevant_article_ids": [
+          "demo-budget-001",
+          "demo-budget-002",
+          "demo-budget-003",
+          "demo-budget-004",
+          "demo-budget-005",
+          "demo-budget-006",
+          "demo-budget-007"
+        ],
+        "expected_top_article_ids": [
+          "demo-budget-001",
+          "demo-budget-002",
+          "demo-budget-003",
+          "demo-budget-004",
+          "demo-budget-005"
+        ]
+      }
+    }
+  ]
+}

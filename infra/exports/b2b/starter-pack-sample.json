@@ -1,0 +1,311 @@
+{
+  "generated_at": "2026-04-10T23:35:00.000+09:00",
+  "package_name": "starter-report-beta-draft",
+  "positioning": {
+    "headline": "지금 읽는 기사에서 시작해, 다음 날 브리핑까지 이어지는 미팅용 베타 데모",
+    "subheadline": "대표 이슈 economy / export에서 6개 출처와 4시간 타임라인을 먼저 보여주고, 3개 briefing item으로 반복 사용 가치를 바로 연결합니다.",
+    "proof_points": [
+      "6개 출처가 4시간 안에 같은 이슈를 이어 받아, 첫 데모에서 cross-source comparison 가치를 바로 보여주기에 가장 좋습니다.",
+      "economy / export: 6개 출처에서 오늘 새 기사 6건이 추가됐고, economy, export 신호가 반복되는 이슈, 수치 12, 48가 반복됩니다. watchlist와 직접 연결된 우선 추적 항목입니다. Digital Industry Desk가 9.667시간 전 최신 업데이트를 냈습니다.",
+      "JSON/CSV export는 파일 전달형 handoff 경로로만 설명하며, beta에서 external API나 team dashboard를 약속하지 않습니다."
+    ],
+    "immediate_value": "현재 읽는 기사 옆에서 같은 이슈의 다른 보도, 출처 카드, 최신성 신호를 바로 비교할 수 있다는 점을 먼저 보여줍니다.",
+    "repeat_use_value": "watchlist와 daily briefing scaffold가 한 번의 비교를 반복 확인 습관으로 바꾸는 구조라는 점을 이어서 설명합니다.",
+    "founder_pass_reason": "Founder Pass는 더 많은 watchlist 저장과 briefing 접근을 열어, 개인 사용자가 이슈를 계속 추적할 이유를 만드는 베타 유료 옵션입니다.",
+    "b2b_demo_value": "Starter Report는 economy, export 신호와 12, 48 수치가 여러 출처에서 반복됩니다. 파일 형태로 보여주는 초기 B2B 제안 자료입니다.",
+    "scope_guardrail": "beta에서는 external API 판매, team dashboard, 월 정기구독을 약속하지 않습니다."
+  },
+  "delivery_assets": {
+    "sample_issue_report": {
+      "report_id": "sample-issue-report-demo-cluster-bb3b075b4251d1fb",
+      "generated_at": "2026-04-10T23:30:00.000+09:00",
+      "report_type": "sample_issue_report",
+      "resolve_state": "success_full",
+      "cluster": {
+        "cluster_id": "demo-cluster-bb3b075b4251d1fb",
+        "label": "economy / export",
+        "status": "active",
+        "article_count": 6,
+        "publisher_count": 6,
+        "coverage_window_hours": 4,
+        "first_seen_at": "2026-04-10T00:20:00.000Z",
+        "last_seen_at": "2026-04-10T04:20:00.000Z",
+        "top_entities": [
+          "economy",
+          "export",
+          "license"
+        ],
+        "top_numbers": [
+          "12",
+          "48"
+        ]
+      },
+      "summary": {
+        "headline": "economy / export 이슈: 6개 출처가 4시간 안에 6건을 이어 쓴 대표 데모",
+        "angle": "이 샘플은 기사 비교의 즉시 가치를 가장 분명하게 보여주는 대표 이슈입니다. 6개 출처가 4시간 안에 같은 이슈를 이어 받아, 첫 데모에서 cross-source comparison 가치를 바로 보여주기에 가장 좋습니다. 공통 신호는 economy, export, license에 모이고, 반복 수치는 12, 48로 정리됩니다.",
+        "freshness_note": "보도 범위는 2026-04-10T00:20:00.000Z부터 2026-04-10T04:20:00.000Z까지이며, 가장 최근 추적 기사는 Digital Industry Desk에서 나왔습니다.",
+        "recommended_action": "첫 미팅에서는 이 이슈로 기사 비교의 즉시 가치를 보여준 뒤, watchlist와 daily briefing이 반복 사용으로 이어진다는 점까지 연결하세요. 현재 리포트 준비도 점수는 0.922이고, anchor 선택 이유는 center / data 묶음보다 출처 다양성과 readiness가 더 좋아, operator가 왜 이 이슈를 먼저 보여주는지 한 문장으로 설명하기 쉬운 anchor입니다.",
+        "common_signals": {
+          "entities": [
+            "economy",
+            "export",
+            "license"
+          ],
+          "numbers": [
+            "12",
+            "48"
+          ]
+        },
+        "selection_reason": {
+          "readiness_score": 0.922,
+          "reasons": [
+            "6개 출처가 4시간 안에 같은 이슈를 이어 받아, 첫 데모에서 cross-source comparison 가치를 바로 보여주기에 가장 좋습니다.",
+            "economy, export 신호와 12, 48 수치가 여러 출처에서 반복됩니다.",
+            "center / data 묶음보다 출처 다양성과 readiness가 더 좋아, operator가 왜 이 이슈를 먼저 보여주는지 한 문장으로 설명하기 쉬운 anchor입니다."
+          ]
+        }
+      },
+      "related_articles": [
+        {
+          "article_id": "demo-semi-001",
+          "url": "https://wire-korea.example/economy/semiconductor/001",
+          "publisher_name": "Wire Korea",
+          "title": "Seoul task force starts overnight semiconductor export license review after customs backlog",
+          "published_at": "2026-04-10T00:35:00.000Z",
+          "summary_line": "Officials started an overnight semiconductor export license review after 12 cargo lots stalled in customs and the backlog stretched toward 48 hours.",
+          "score": 1
+        },
+        {
+          "article_id": "demo-semi-002",
+          "url": "https://market-insight.example/economy/semiconductor/002",
+          "publisher_name": "Market Insight",
+          "title": "Chipmakers request semiconductor export license review as Seoul customs backlog grows",
+          "published_at": "2026-04-10T01:05:00.000Z",
+          "summary_line": "Chipmakers asked for three emergency license reviews after the semiconductor export queue grew beyond a 48 hour backlog.",
+          "score": 0.987
+        },
+        {
+          "article_id": "demo-semi-003",
+          "url": "https://industry-ledger.example/economy/semiconductor/003",
+          "publisher_name": "Industry Ledger",
+          "title": "Customs adds night desk to semiconductor export license backlog",
+          "published_at": "2026-04-10T01:35:00.000Z",
+          "summary_line": "Customs added a night desk to the semiconductor export license backlog after 12 lots remained stuck in queue.",
+          "score": 0.82
+        },
+        {
+          "article_id": "demo-semi-008",
+          "url": "https://digital-industry-watch.example/economy/semiconductor/008",
+          "publisher_name": "Digital Industry Desk",
+          "title": "Night-shift review team opens as semiconductor export license customs queue widens",
+          "published_at": "2026-04-10T04:20:00.000Z",
+          "summary_line": "A night-shift review team opened as the semiconductor export license customs queue widened beyond the original 12 lot estimate.",
+          "score": 0.815
+        },
+        {
+          "article_id": "demo-semi-004",
+          "url": "https://business-briefing.example/economy/semiconductor/004",
+          "publisher_name": "Capital Briefing",
+          "title": "Seoul maps 48-hour bottlenecks in semiconductor export license backlog",
+          "published_at": "2026-04-10T02:05:00.000Z",
+          "summary_line": "Seoul mapped the 48 hour bottlenecks inside the semiconductor export license backlog after suppliers flagged contract risk.",
+          "score": 0.768
+        }
+      ],
+      "export_paths": [
+        {
+          "purpose": "issue_report",
+          "format": "json",
+          "path": "infra/exports/reports/sample-issue-report.json",
+          "description": "내부 데모와 B2B 미팅용 sample issue report JSON."
+        },
+        {
+          "purpose": "issue_report",
+          "format": "csv",
+          "path": "infra/exports/reports/sample-issue-report.csv",
+          "description": "분석/공유용 handoff에 쓰는 sample issue report CSV."
+        }
+      ]
+    },
+    "daily_briefing": {
+      "date": "2026-04-10",
+      "timezone": "Asia/Seoul",
+      "generated_at": "2026-04-10T23:00:00.000+09:00",
+      "source": "watchlist_priority",
+      "items": [
+        {
+          "cluster_id": "demo-cluster-bb3b075b4251d1fb",
+          "label": "economy / export",
+          "priority_score": 0.951,
+          "new_article_count": 6,
+          "publisher_count": 6,
+          "latest_articles": [
+            {
+              "article_id": "demo-semi-008",
+              "url": "https://digital-industry-watch.example/economy/semiconductor/008",
+              "publisher_name": "Digital Industry Desk",
+              "title": "Night-shift review team opens as semiconductor export license customs queue widens",
+              "published_at": "2026-04-10T04:20:00.000Z",
+              "summary_line": "A night-shift review team opened as the semiconductor export license customs queue widened beyond the original 12 lot estimate.",
+              "score": 0.815
+            },
+            {
+              "article_id": "demo-semi-004",
+              "url": "https://business-briefing.example/economy/semiconductor/004",
+              "publisher_name": "Capital Briefing",
+              "title": "Seoul maps 48-hour bottlenecks in semiconductor export license backlog",
+              "published_at": "2026-04-10T02:05:00.000Z",
+              "summary_line": "Seoul mapped the 48 hour bottlenecks inside the semiconductor export license backlog after suppliers flagged contract risk.",
+              "score": 0.768
+            },
+            {
+              "article_id": "demo-semi-003",
+              "url": "https://industry-ledger.example/economy/semiconductor/003",
+              "publisher_name": "Industry Ledger",
+              "title": "Customs adds night desk to semiconductor export license backlog",
+              "published_at": "2026-04-10T01:35:00.000Z",
+              "summary_line": "Customs added a night desk to the semiconductor export license backlog after 12 lots remained stuck in queue.",
+              "score": 0.82
+            }
+          ],
+          "common_entities": [
+            "economy",
+            "export",
+            "license"
+          ],
+          "common_numbers": [
+            "12",
+            "48"
+          ],
+          "briefing_angle": "economy / export: 6개 출처에서 오늘 새 기사 6건이 추가됐고, economy, export 신호가 반복되는 이슈, 수치 12, 48가 반복됩니다. watchlist와 직접 연결된 우선 추적 항목입니다.",
+          "freshness_note": "Digital Industry Desk가 9.667시간 전 최신 업데이트를 냈습니다.",
+          "watchlist_match": true
+        },
+        {
+          "cluster_id": "demo-cluster-bab752b56fc6fc74",
+          "label": "economy / dollar",
+          "priority_score": 0.648,
+          "new_article_count": 4,
+          "publisher_count": 4,
+          "latest_articles": [
+            {
+              "article_id": "demo-fx-003",
+              "url": "https://trade-ledger.example/markets/fx/003",
+              "publisher_name": "Trade Ledger",
+              "title": "Small exporters seek pooled dollar hedge after Seoul FX alert",
+              "published_at": "2026-04-10T10:35:00.000Z",
+              "summary_line": "Small exporters moved toward pooled dollar hedge desks after Seoul flagged a 1.3 billion dollar exposure review.",
+              "score": 0.625
+            },
+            {
+              "article_id": "demo-fx-002",
+              "url": "https://market-brief.example/markets/fx/002",
+              "publisher_name": "Market Brief",
+              "title": "Auto exporters rewrite 90 day hedge books after FX warning",
+              "published_at": "2026-04-10T10:00:00.000Z",
+              "summary_line": "Auto exporters said the FX warning forced them to rewrite 90 day hedge books.",
+              "score": 0.634
+            },
+            {
+              "article_id": "demo-fx-001",
+              "url": "https://fx-daily.example/markets/fx/001",
+              "publisher_name": "FX Daily",
+              "title": "Shipbuilders widen dollar hedges after 5 percent margin warning",
+              "published_at": "2026-04-10T09:30:00.000Z",
+              "summary_line": "Shipbuilders widened dollar hedges after the Seoul warning highlighted a 5 percent margin squeeze.",
+              "score": 0.826
+            }
+          ],
+          "common_entities": [
+            "economy",
+            "dollar",
+            "exporters"
+          ],
+          "common_numbers": [
+            "1.3",
+            "5"
+          ],
+          "briefing_angle": "economy / dollar: 4개 출처에서 오늘 새 기사 4건이 추가됐고, economy, dollar 신호가 반복되는 이슈, 수치 1.3, 5가 반복됩니다. briefing용 보조 맥락 항목입니다.",
+          "freshness_note": "Trade Ledger가 3.417시간 전 최신 업데이트를 냈습니다.",
+          "watchlist_match": false
+        },
+        {
+          "cluster_id": "demo-cluster-a6ce81fc71b2ac61",
+          "label": "bridge / coast",
+          "priority_score": 0.552,
+          "new_article_count": 3,
+          "publisher_count": 3,
+          "latest_articles": [
+            {
+              "article_id": "demo-flood-005",
+              "url": "https://wire-korea.example/flood/005",
+              "publisher_name": "Public Service Wire",
+              "title": "South coast relief office adds materials audit to bridge repair fund",
+              "published_at": "2026-04-10T07:40:00.000Z",
+              "summary_line": "The relief office added a materials audit to the bridge repair fund after 72 households remained cut off.",
+              "score": 0.763
+            },
+            {
+              "article_id": "demo-flood-001",
+              "url": "https://regional-wire.example/local/flood/001",
+              "publisher_name": "Regional Wire",
+              "title": "South coast repair fund releases first bridge tranche after flood",
+              "published_at": "2026-04-10T05:25:00.000Z",
+              "summary_line": "The repair fund released its first bridge tranche after floods isolated 72 households and closed two spans.",
+              "score": 0.966
+            }
+          ],
+          "common_entities": [
+            "bridge",
+            "coast",
+            "fund"
+          ],
+          "common_numbers": [
+            "72",
+            "18"
+          ],
+          "briefing_angle": "bridge / coast: 3개 출처에서 오늘 새 기사 3건이 추가됐고, bridge, coast 신호가 반복되는 이슈, 수치 72, 18가 반복됩니다. briefing용 보조 맥락 항목입니다.",
+          "freshness_note": "Public Service Wire가 6.333시간 전 최신 업데이트를 냈습니다.",
+          "watchlist_match": false
+        }
+      ],
+      "export_paths": [
+        {
+          "purpose": "daily_briefing",
+          "format": "json",
+          "path": "infra/exports/briefings/daily-briefing-sample.json",
+          "description": "story cluster 기반 daily briefing scaffold JSON."
+        }
+      ]
+    }
+  },
+  "support_flow": {
+    "owner": "founding team",
+    "beta_channel_status": "draft",
+    "intake_steps": [
+      "요청 출처를 먼저 기록합니다: extension 사용자, 잠재 고객, 소개 유입.",
+      "문의 유형을 support, 데이터 수정, starter report 문의로 분류합니다.",
+      "같은 날 접수 확인을 보내고, 후속 조치는 운영 백로그로 넘깁니다."
+    ],
+    "response_sla": "Same business day acknowledgement, next-step response within 2 business days."
+  },
+  "sales_notes": [
+    "미팅은 economy / export 이슈: 6개 출처가 4시간 안에 6건을 이어 쓴 대표 데모으로 시작하고, 왜 이 cluster를 대표 데모로 골랐는지 6개 출처가 4시간 안에 같은 이슈를 이어 받아, 첫 데모에서 cross-source comparison 가치를 바로 보여주기에 가장 좋습니다.로 설명합니다.",
+    "그다음 3개 briefing item과 watchlist를 연결해 Founder Pass가 개인 반복 사용을 여는 업그레이드라는 점을 보여줍니다.",
+    "CSV export는 파일 전달형 파일럿 경로로만 설명하고, beta에서 external API나 team dashboard를 약속하지 않습니다."
+  ],
+  "export_paths": [
+    {
+      "purpose": "starter_pack",
+      "format": "json",
+      "path": "infra/exports/b2b/starter-pack-sample.json",
+      "description": "내부 세일즈와 고객 탐색용 B2B starter pack draft JSON."
+    },
+    {
+      "purpose": "starter_pack",
+      "format": "csv",
+      "path": "infra/exports/b2b/starter-pack-sample.csv",
+      "description": "starter pack 핵심 문구를 빠르게 공유하는 compact CSV."
+    }
+  ]
+}

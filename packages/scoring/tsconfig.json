@@ -1,0 +1,23 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "rootDir": "src",
+    "outDir": "dist",
+    "paths": {
+      "@news-context/shared-types": [
+        "../shared-types/dist/index.d.ts"
+      ]
+    },
+    "lib": [
+      "ES2022"
+    ],
+    "types": [
+      "node"
+    ],
+    "tsBuildInfoFile": "dist/.tsbuildinfo"
+  },
+  "include": [
+    "src/**/*.ts"
+  ]
+}

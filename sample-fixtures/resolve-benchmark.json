@@ -1,0 +1,263 @@
+{
+  "schema_version": 1,
+  "dataset_name": "resolve-oracle-benchmark-baseline",
+  "description": "Resolve benchmark contract set. Inputs and expected outputs are fixture-driven so benchmark and validation can run before any real scoring implementation exists.",
+  "generated_at": "2026-04-10T03:22:00.000Z",
+  "budgets": {
+    "target_p95_latency_ms": 2500,
+    "min_precision_at_5": 0.8,
+    "candidate_time_window_hours": 72,
+    "min_related_articles": 3,
+    "max_related_articles": 5
+  },
+  "cases": [
+    {
+      "case_id": "resolve-001-semiconductor-policy",
+      "source_fixture_case_id": "naver-001-jsonld-complete",
+      "description": "Happy-path resolve case for a policy-driven semiconductor supply chain story with enough relevant coverage to fill five related articles.",
+      "request": {
+        "url": "https://n.news.naver.com/article/001/0015324001",
+        "canonical_url": "https://n.news.naver.com/article/001/0015324001",
+        "title": "정부, 반도체 공급망 점검회의 개최",
+        "publisher_name": "연합뉴스",
+        "author_names": ["김민지"],
+        "published_at": "2026-04-01T01:30:00.000Z",
+        "modified_at": "2026-04-01T02:00:00.000Z",
+        "article_type": "news",
+        "section": "politics",
+        "keywords": ["반도체", "공급망", "정부"],
+        "body_excerpt": "정부가 반도체 공급망 점검회의를 열고 주요 품목 수급 상황과 대응 방안을 논의했다.",
+        "correction_note_detected": false,
+        "parse_confidence": 0.97,
+        "anon_id": "anon-semiconductor-001",
+        "page_lang": "ko"
+      },
+      "candidate_pool": [
+        {
+          "article_id": "sem-001",
+          "url": "https://example.news/semiconductor/1",
+          "publisher_name": "연합뉴스",
+          "title": "정부, 반도체 핵심 품목 수급 점검",
+          "published_at": "2026-04-01T00:50:00.000Z",
+          "summary_line": "정부가 핵심 품목 수급 상황을 긴급 점검했다.",
+          "expected_relevance": "relevant",
+          "expected_rank": 1
+        },
+        {
+          "article_id": "sem-002",
+          "url": "https://example.news/semiconductor/2",
+          "publisher_name": "한겨레",
+          "title": "반도체 공급망 리스크 대응 예산 확대 검토",
+          "published_at": "2026-04-01T01:10:00.000Z",
+          "summary_line": "정부가 공급망 대응 예산 확대를 검토 중이다.",
+          "expected_relevance": "relevant",
+          "expected_rank": 2
+        },
+        {
+          "article_id": "sem-003",
+          "url": "https://example.news/semiconductor/3",
+          "publisher_name": "중앙일보",
+          "title": "업계, 반도체 공급망 점검회의 결과에 촉각",
+          "published_at": "2026-04-01T02:20:00.000Z",
+          "summary_line": "업계가 공급망 회의 후속 조치를 주목하고 있다.",
+          "expected_relevance": "relevant",
+          "expected_rank": 3
+        },
+        {
+          "article_id": "sem-004",
+          "url": "https://example.news/semiconductor/4",
+          "publisher_name": "경향신문",
+          "title": "반도체 공급망 안정화 지원책 다음 주 발표",
+          "published_at": "2026-04-01T03:00:00.000Z",
+          "summary_line": "지원책 발표 일정이 공개됐다.",
+          "expected_relevance": "relevant",
+          "expected_rank": 4
+        },
+        {
+          "article_id": "sem-005",
+          "url": "https://example.news/semiconductor/5",
+          "publisher_name": "뉴스1",
+          "title": "반도체 장비 업계도 공급망 회의 후속 대응 착수",
+          "published_at": "2026-04-01T03:40:00.000Z",
+          "summary_line": "장비 업계도 후속 대응에 나섰다.",
+          "expected_relevance": "relevant",
+          "expected_rank": 5
+        },
+        {
+          "article_id": "sem-006",
+          "url": "https://example.news/auto/6",
+          "publisher_name": "조선일보",
+          "title": "완성차 업계, 전기차 보조금 개편에 촉각",
+          "published_at": "2026-04-01T01:00:00.000Z",
+          "summary_line": "전기차 보조금 개편이 업계 변수로 떠올랐다.",
+          "expected_relevance": "distractor"
+        },
+        {
+          "article_id": "sem-007",
+          "url": "https://example.news/market/7",
+          "publisher_name": "매일경제",
+          "title": "외국인 매수세에 코스피 반등",
+          "published_at": "2026-04-01T02:30:00.000Z",
+          "summary_line": "증시 반등 소식으로 마감했다.",
+          "expected_relevance": "distractor"
+        }
+      ],
+      "expected": {
+        "state": "success_full",
+        "freshness_state": "fresh",
+        "context_confidence_min": 0.9,
+        "min_related_count": 3,
+        "max_related_count": 5,
+        "relevant_article_ids": ["sem-001", "sem-002", "sem-003", "sem-004", "sem-005"],
+        "expected_top_article_ids": ["sem-001", "sem-002", "sem-003", "sem-004", "sem-005"]
+      }
+    },
+    {
+      "case_id": "resolve-002-flood-response-insufficient",
+      "source_fixture_case_id": "naver-003-dom-fallback-partial",
+      "description": "Not enough same-issue coverage within the candidate window, so resolve should stay in insufficient_results.",
+      "request": {
+        "url": "https://n.news.naver.com/article/032/0003357003",
+        "title": "집중호우 이후 복구 작업 속도전",
+        "publisher_name": "경향신문",
+        "published_at": "2026-04-03T05:40:00.000Z",
+        "article_type": "news",
+        "section": "society",
+        "body_excerpt": "집중호우 피해 지역에서 복구 인력과 장비가 추가 투입되며 복구 작업이 이어지고 있다.",
+        "correction_note_detected": false,
+        "parse_confidence": 0.66,
+        "anon_id": "anon-flood-002",
+        "page_lang": "ko"
+      },
+      "candidate_pool": [
+        {
+          "article_id": "flood-001",
+          "url": "https://example.news/flood/1",
+          "publisher_name": "경향신문",
+          "title": "복구 장비 추가 투입에도 일부 지역 통제 지속",
+          "published_at": "2026-04-03T06:10:00.000Z",
+          "summary_line": "일부 지역은 여전히 출입이 통제되고 있다.",
+          "expected_relevance": "relevant",
+          "expected_rank": 1
+        },
+        {
+          "article_id": "flood-002",
+          "url": "https://example.news/flood/2",
+          "publisher_name": "연합뉴스",
+          "title": "집중호우 피해 복구 예산 긴급 편성 검토",
+          "published_at": "2026-04-03T07:00:00.000Z",
+          "summary_line": "긴급 복구 예산 편성 검토가 시작됐다.",
+          "expected_relevance": "relevant",
+          "expected_rank": 2
+        },
+        {
+          "article_id": "flood-003",
+          "url": "https://example.news/weather/3",
+          "publisher_name": "기상청",
+          "title": "주말 전국 대체로 맑음",
+          "published_at": "2026-04-03T07:10:00.000Z",
+          "summary_line": "주말에는 비 소식이 없을 전망이다.",
+          "expected_relevance": "distractor"
+        },
+        {
+          "article_id": "flood-004",
+          "url": "https://example.news/local/4",
+          "publisher_name": "지역신문",
+          "title": "도심 축제 개최 앞두고 교통 통제",
+          "published_at": "2026-04-03T08:10:00.000Z",
+          "summary_line": "도심 축제 준비로 교통 통제가 시작됐다.",
+          "expected_relevance": "distractor"
+        }
+      ],
+      "expected": {
+        "state": "insufficient_results",
+        "freshness_state": "updated",
+        "context_confidence_min": 0.62,
+        "min_related_count": 0,
+        "max_related_count": 2,
+        "relevant_article_ids": ["flood-001", "flood-002"],
+        "expected_top_article_ids": ["flood-001", "flood-002"]
+      }
+    },
+    {
+      "case_id": "resolve-003-market-wrap-low-confidence",
+      "source_fixture_case_id": "naver-002-meta-fallback",
+      "description": "Candidate set is coherent, but source parse confidence is low enough that the benchmark preserves a low_confidence expected state.",
+      "request": {
+        "url": "https://n.news.naver.com/article/025/0003402002",
+        "canonical_url": "https://n.news.naver.com/article/025/0003402002",
+        "title": "환율 변동성 확대에 수출기업 대응 고심",
+        "publisher_name": "중앙일보",
+        "author_names": ["이수연"],
+        "published_at": "2026-04-02T00:10:00.000Z",
+        "article_type": "analysis",
+        "section": "economy",
+        "keywords": ["환율", "수출", "기업"],
+        "body_excerpt": "원화 변동성이 커지면서 수출기업들이 환헤지 전략을 재점검하고 있다.",
+        "correction_note_detected": false,
+        "parse_confidence": 0.58,
+        "anon_id": "anon-market-003",
+        "page_lang": "ko"
+      },
+      "candidate_pool": [
+        {
+          "article_id": "fx-001",
+          "url": "https://example.news/fx/1",
+          "publisher_name": "중앙일보",
+          "title": "환헤지 비용 상승에 중견 수출기업 부담 확대",
+          "published_at": "2026-04-02T00:30:00.000Z",
+          "summary_line": "환헤지 비용 상승이 기업 부담을 키우고 있다.",
+          "expected_relevance": "relevant",
+          "expected_rank": 1
+        },
+        {
+          "article_id": "fx-002",
+          "url": "https://example.news/fx/2",
+          "publisher_name": "한국경제",
+          "title": "수출기업, 환율 급등에 계약 조건 재조정 검토",
+          "published_at": "2026-04-02T01:15:00.000Z",
+          "summary_line": "환율 급등이 계약 조건 재조정 논의를 낳고 있다.",
+          "expected_relevance": "relevant",
+          "expected_rank": 2
+        },
+        {
+          "article_id": "fx-003",
+          "url": "https://example.news/fx/3",
+          "publisher_name": "매일경제",
+          "title": "외환시장 변동성 확대, 기업 리스크 관리 중요",
+          "published_at": "2026-04-02T02:00:00.000Z",
+          "summary_line": "기업 리스크 관리 중요성이 다시 부각된다.",
+          "expected_relevance": "relevant",
+          "expected_rank": 3
+        },
+        {
+          "article_id": "fx-004",
+          "url": "https://example.news/consumer/4",
+          "publisher_name": "서울경제",
+          "title": "봄 세일 본격화에 유통가 판촉 경쟁",
+          "published_at": "2026-04-02T01:00:00.000Z",
+          "summary_line": "유통가가 봄 세일 경쟁을 시작했다.",
+          "expected_relevance": "distractor"
+        },
+        {
+          "article_id": "fx-005",
+          "url": "https://example.news/startup/5",
+          "publisher_name": "벤처타임즈",
+          "title": "초기 스타트업 채용 시장 회복 조짐",
+          "published_at": "2026-04-02T03:10:00.000Z",
+          "summary_line": "채용 시장 회복 기대감이 커지고 있다.",
+          "expected_relevance": "distractor"
+        }
+      ],
+      "expected": {
+        "state": "low_confidence",
+        "freshness_state": "watch_newer",
+        "context_confidence_min": 0.55,
+        "min_related_count": 3,
+        "max_related_count": 3,
+        "relevant_article_ids": ["fx-001", "fx-002", "fx-003"],
+        "expected_top_article_ids": ["fx-001", "fx-002", "fx-003"]
+      }
+    }
+  ]
+}

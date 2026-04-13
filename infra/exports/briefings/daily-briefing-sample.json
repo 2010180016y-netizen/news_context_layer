@@ -1,0 +1,151 @@
+{
+  "date": "2026-04-10",
+  "timezone": "Asia/Seoul",
+  "generated_at": "2026-04-10T23:00:00.000+09:00",
+  "source": "watchlist_priority",
+  "items": [
+    {
+      "cluster_id": "demo-cluster-bb3b075b4251d1fb",
+      "label": "economy / export",
+      "priority_score": 0.951,
+      "new_article_count": 6,
+      "publisher_count": 6,
+      "latest_articles": [
+        {
+          "article_id": "demo-semi-008",
+          "url": "https://digital-industry-watch.example/economy/semiconductor/008",
+          "publisher_name": "Digital Industry Desk",
+          "title": "Night-shift review team opens as semiconductor export license customs queue widens",
+          "published_at": "2026-04-10T04:20:00.000Z",
+          "summary_line": "A night-shift review team opened as the semiconductor export license customs queue widened beyond the original 12 lot estimate.",
+          "score": 0.815
+        },
+        {
+          "article_id": "demo-semi-004",
+          "url": "https://business-briefing.example/economy/semiconductor/004",
+          "publisher_name": "Capital Briefing",
+          "title": "Seoul maps 48-hour bottlenecks in semiconductor export license backlog",
+          "published_at": "2026-04-10T02:05:00.000Z",
+          "summary_line": "Seoul mapped the 48 hour bottlenecks inside the semiconductor export license backlog after suppliers flagged contract risk.",
+          "score": 0.768
+        },
+        {
+          "article_id": "demo-semi-003",
+          "url": "https://industry-ledger.example/economy/semiconductor/003",
+          "publisher_name": "Industry Ledger",
+          "title": "Customs adds night desk to semiconductor export license backlog",
+          "published_at": "2026-04-10T01:35:00.000Z",
+          "summary_line": "Customs added a night desk to the semiconductor export license backlog after 12 lots remained stuck in queue.",
+          "score": 0.82
+        }
+      ],
+      "common_entities": [
+        "economy",
+        "export",
+        "license"
+      ],
+      "common_numbers": [
+        "12",
+        "48"
+      ],
+      "briefing_angle": "economy / export: 6개 출처에서 오늘 새 기사 6건이 추가됐고, economy, export 신호가 반복되는 이슈, 수치 12, 48가 반복됩니다. watchlist와 직접 연결된 우선 추적 항목입니다.",
+      "freshness_note": "Digital Industry Desk가 9.667시간 전 최신 업데이트를 냈습니다.",
+      "watchlist_match": true
+    },
+    {
+      "cluster_id": "demo-cluster-bab752b56fc6fc74",
+      "label": "economy / dollar",
+      "priority_score": 0.648,
+      "new_article_count": 4,
+      "publisher_count": 4,
+      "latest_articles": [
+        {
+          "article_id": "demo-fx-003",
+          "url": "https://trade-ledger.example/markets/fx/003",
+          "publisher_name": "Trade Ledger",
+          "title": "Small exporters seek pooled dollar hedge after Seoul FX alert",
+          "published_at": "2026-04-10T10:35:00.000Z",
+          "summary_line": "Small exporters moved toward pooled dollar hedge desks after Seoul flagged a 1.3 billion dollar exposure review.",
+          "score": 0.625
+        },
+        {
+          "article_id": "demo-fx-002",
+          "url": "https://market-brief.example/markets/fx/002",
+          "publisher_name": "Market Brief",
+          "title": "Auto exporters rewrite 90 day hedge books after FX warning",
+          "published_at": "2026-04-10T10:00:00.000Z",
+          "summary_line": "Auto exporters said the FX warning forced them to rewrite 90 day hedge books.",
+          "score": 0.634
+        },
+        {
+          "article_id": "demo-fx-001",
+          "url": "https://fx-daily.example/markets/fx/001",
+          "publisher_name": "FX Daily",
+          "title": "Shipbuilders widen dollar hedges after 5 percent margin warning",
+          "published_at": "2026-04-10T09:30:00.000Z",
+          "summary_line": "Shipbuilders widened dollar hedges after the Seoul warning highlighted a 5 percent margin squeeze.",
+          "score": 0.826
+        }
+      ],
+      "common_entities": [
+        "economy",
+        "dollar",
+        "exporters"
+      ],
+      "common_numbers": [
+        "1.3",
+        "5"
+      ],
+      "briefing_angle": "economy / dollar: 4개 출처에서 오늘 새 기사 4건이 추가됐고, economy, dollar 신호가 반복되는 이슈, 수치 1.3, 5가 반복됩니다. briefing용 보조 맥락 항목입니다.",
+      "freshness_note": "Trade Ledger가 3.417시간 전 최신 업데이트를 냈습니다.",
+      "watchlist_match": false
+    },
+    {
+      "cluster_id": "demo-cluster-a6ce81fc71b2ac61",
+      "label": "bridge / coast",
+      "priority_score": 0.552,
+      "new_article_count": 3,
+      "publisher_count": 3,
+      "latest_articles": [
+        {
+          "article_id": "demo-flood-005",
+          "url": "https://wire-korea.example/flood/005",
+          "publisher_name": "Public Service Wire",
+          "title": "South coast relief office adds materials audit to bridge repair fund",
+          "published_at": "2026-04-10T07:40:00.000Z",
+          "summary_line": "The relief office added a materials audit to the bridge repair fund after 72 households remained cut off.",
+          "score": 0.763
+        },
+        {
+          "article_id": "demo-flood-001",
+          "url": "https://regional-wire.example/local/flood/001",
+          "publisher_name": "Regional Wire",
+          "title": "South coast repair fund releases first bridge tranche after flood",
+          "published_at": "2026-04-10T05:25:00.000Z",
+          "summary_line": "The repair fund released its first bridge tranche after floods isolated 72 households and closed two spans.",
+          "score": 0.966
+        }
+      ],
+      "common_entities": [
+        "bridge",
+        "coast",
+        "fund"
+      ],
+      "common_numbers": [
+        "72",
+        "18"
+      ],
+      "briefing_angle": "bridge / coast: 3개 출처에서 오늘 새 기사 3건이 추가됐고, bridge, coast 신호가 반복되는 이슈, 수치 72, 18가 반복됩니다. briefing용 보조 맥락 항목입니다.",
+      "freshness_note": "Public Service Wire가 6.333시간 전 최신 업데이트를 냈습니다.",
+      "watchlist_match": false
+    }
+  ],
+  "export_paths": [
+    {
+      "purpose": "daily_briefing",
+      "format": "json",
+      "path": "infra/exports/briefings/daily-briefing-sample.json",
+      "description": "story cluster 기반 daily briefing scaffold JSON."
+    }
+  ]
+}

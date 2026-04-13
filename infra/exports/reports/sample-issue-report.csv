@@ -1,0 +1,6 @@
+report_id,cluster_id,cluster_label,article_id,publisher_name,title,published_at,score
+sample-issue-report-demo-cluster-bb3b075b4251d1fb,demo-cluster-bb3b075b4251d1fb,economy / export,demo-semi-001,Wire Korea,Seoul task force starts overnight semiconductor export license review after customs backlog,2026-04-10T00:35:00.000Z,1
+sample-issue-report-demo-cluster-bb3b075b4251d1fb,demo-cluster-bb3b075b4251d1fb,economy / export,demo-semi-002,Market Insight,Chipmakers request semiconductor export license review as Seoul customs backlog grows,2026-04-10T01:05:00.000Z,0.987
+sample-issue-report-demo-cluster-bb3b075b4251d1fb,demo-cluster-bb3b075b4251d1fb,economy / export,demo-semi-003,Industry Ledger,Customs adds night desk to semiconductor export license backlog,2026-04-10T01:35:00.000Z,0.82
+sample-issue-report-demo-cluster-bb3b075b4251d1fb,demo-cluster-bb3b075b4251d1fb,economy / export,demo-semi-008,Digital Industry Desk,Night-shift review team opens as semiconductor export license customs queue widens,2026-04-10T04:20:00.000Z,0.815
+sample-issue-report-demo-cluster-bb3b075b4251d1fb,demo-cluster-bb3b075b4251d1fb,economy / export,demo-semi-004,Capital Briefing,Seoul maps 48-hour bottlenecks in semiconductor export license backlog,2026-04-10T02:05:00.000Z,0.768

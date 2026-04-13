@@ -1,0 +1,12 @@
+{
+  "generated_at": "2026-04-10T23:35:00.000+09:00",
+  "outputs": {
+    "issue_report_json": "infra/exports/reports/sample-issue-report.json",
+    "issue_report_csv": "infra/exports/reports/sample-issue-report.csv",
+    "daily_briefing_json": "infra/exports/briefings/daily-briefing-sample.json",
+    "starter_pack_json": "infra/exports/b2b/starter-pack-sample.json",
+    "starter_pack_csv": "infra/exports/b2b/starter-pack-sample.csv",
+    "recurring_report_cycle_json": "infra/exports/b2b/recurring-report-cycle-summary.json"
+  },
+  "note": "이 export 경로는 결정론적 meeting-ready demo corpus를 기반으로 한 내부 데모와 파일럿 handoff용 자산이며, beta에서 external API, team dashboard, 최종 Analyst entitlement를 약속하지 않는다."
+}

@@ -1,0 +1,177 @@
+[
+  {
+    "publisher_name": "Yonhap News",
+    "domain": "yna.co.kr",
+    "primary_source": "rss",
+    "parser_order": ["jsonld", "meta", "dom"],
+    "article_type_detection": "section plus keywords",
+    "status": "active",
+    "notes": "Stage 2 baseline seed for RSS and sitemap ingest validation.",
+    "feeds": [
+      {
+        "feed_type": "rss",
+        "url": "https://www.yna.co.kr/rss/politics.xml",
+        "section": "politics",
+        "status": "active"
+      },
+      {
+        "feed_type": "rss",
+        "url": "https://www.yna.co.kr/rss/economy.xml",
+        "section": "economy",
+        "status": "active"
+      },
+      {
+        "feed_type": "sitemap",
+        "url": "https://www.yna.co.kr/sitemap/politics.xml",
+        "section": "politics",
+        "status": "active"
+      },
+      {
+        "feed_type": "sitemap",
+        "url": "https://www.yna.co.kr/sitemap/economy.xml",
+        "section": "economy",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "publisher_name": "Hankyoreh",
+    "domain": "hani.co.kr",
+    "primary_source": "sitemap",
+    "parser_order": ["jsonld", "meta", "dom"],
+    "article_type_detection": "section inference from url path",
+    "status": "active",
+    "notes": "Stage 2 baseline seed for sitemap-first publisher coverage.",
+    "feeds": [
+      {
+        "feed_type": "rss",
+        "url": "https://www.hani.co.kr/rss/politics.xml",
+        "section": "politics",
+        "status": "active"
+      },
+      {
+        "feed_type": "rss",
+        "url": "https://www.hani.co.kr/rss/economy.xml",
+        "section": "economy",
+        "status": "active"
+      },
+      {
+        "feed_type": "sitemap",
+        "url": "https://www.hani.co.kr/sitemap/politics.xml",
+        "section": "politics",
+        "status": "active"
+      },
+      {
+        "feed_type": "sitemap",
+        "url": "https://www.hani.co.kr/sitemap/economy.xml",
+        "section": "economy",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "publisher_name": "Kyunghyang Shinmun",
+    "domain": "khan.co.kr",
+    "primary_source": "rss",
+    "parser_order": ["jsonld", "meta", "dom"],
+    "article_type_detection": "jsonld preferred with dom fallback",
+    "status": "active",
+    "notes": "Stage 2 baseline seed for mixed politics and economy coverage.",
+    "feeds": [
+      {
+        "feed_type": "rss",
+        "url": "https://www.khan.co.kr/rss/politics.xml",
+        "section": "politics",
+        "status": "active"
+      },
+      {
+        "feed_type": "rss",
+        "url": "https://www.khan.co.kr/rss/economy.xml",
+        "section": "economy",
+        "status": "active"
+      },
+      {
+        "feed_type": "sitemap",
+        "url": "https://www.khan.co.kr/sitemap/politics.xml",
+        "section": "politics",
+        "status": "active"
+      },
+      {
+        "feed_type": "sitemap",
+        "url": "https://www.khan.co.kr/sitemap/economy.xml",
+        "section": "economy",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "publisher_name": "JoongAng Ilbo",
+    "domain": "joongang.co.kr",
+    "primary_source": "sitemap",
+    "parser_order": ["jsonld", "meta", "dom"],
+    "article_type_detection": "structured metadata plus section normalization",
+    "status": "active",
+    "notes": "Stage 2 baseline seed for section-normalized ingest coverage.",
+    "feeds": [
+      {
+        "feed_type": "rss",
+        "url": "https://www.joongang.co.kr/rss/politics.xml",
+        "section": "politics",
+        "status": "active"
+      },
+      {
+        "feed_type": "rss",
+        "url": "https://www.joongang.co.kr/rss/economy.xml",
+        "section": "economy",
+        "status": "active"
+      },
+      {
+        "feed_type": "sitemap",
+        "url": "https://www.joongang.co.kr/sitemap/politics.xml",
+        "section": "politics",
+        "status": "active"
+      },
+      {
+        "feed_type": "sitemap",
+        "url": "https://www.joongang.co.kr/sitemap/economy.xml",
+        "section": "economy",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "publisher_name": "Chosun Ilbo",
+    "domain": "chosun.com",
+    "primary_source": "rss",
+    "parser_order": ["meta", "dom", "jsonld"],
+    "article_type_detection": "meta tags with manual exception list",
+    "status": "partial",
+    "notes": "Stage 2 baseline seed keeps Chosun active for ingest but parser support remains partial.",
+    "feeds": [
+      {
+        "feed_type": "rss",
+        "url": "https://www.chosun.com/rss/politics.xml",
+        "section": "politics",
+        "status": "active"
+      },
+      {
+        "feed_type": "rss",
+        "url": "https://www.chosun.com/rss/economy.xml",
+        "section": "economy",
+        "status": "active"
+      },
+      {
+        "feed_type": "sitemap",
+        "url": "https://www.chosun.com/sitemap/politics.xml",
+        "section": "politics",
+        "status": "active"
+      },
+      {
+        "feed_type": "sitemap",
+        "url": "https://www.chosun.com/sitemap/economy.xml",
+        "section": "economy",
+        "status": "active"
+      }
+    ]
+  }
+]

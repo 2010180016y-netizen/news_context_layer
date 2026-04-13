@@ -1,0 +1,17 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@news-context/shared-types": [
+        "../../packages/shared-types/dist/index.d.ts"
+      ],
+      "@news-context/scoring": [
+        "../../packages/scoring/dist/index.d.ts"
+      ],
+      "@news-context/jobs": [
+        "../jobs/dist/index.d.ts"
+      ]
+    }
+  }
+}

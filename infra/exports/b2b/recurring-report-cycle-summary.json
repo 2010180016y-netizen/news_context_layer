@@ -1,0 +1,71 @@
+{
+  "generated_at": "2026-04-10T23:35:00.000+09:00",
+  "cadence": "weekly",
+  "review_profile": "standard",
+  "operating_mode": "low_volume_pilot",
+  "status": "ready_with_follow_up",
+  "source": "starter_pack_export_bundle",
+  "cadence_guidance": {
+    "ingest_cutoff_hours": 24,
+    "rerun_window_hours": 12,
+    "operator_review_window_hours": 24,
+    "skip_ingest_rule": "Skip ingest only when the vetted corpus is unchanged for the current low-volume pilot window.",
+    "warn_handling": "Warns may ship only with an explicit operator note and follow-up owner."
+  },
+  "artifact_paths": {
+    "sample_issue_report_json": "infra/exports/reports/sample-issue-report.json",
+    "daily_briefing_json": "infra/exports/briefings/daily-briefing-sample.json",
+    "starter_pack_json": "infra/exports/b2b/starter-pack-sample.json"
+  },
+  "checks": [
+    {
+      "id": "artifact_bundle_consistent",
+      "label": "Starter pack, issue report, and daily briefing still describe the same bundle.",
+      "status": "pass",
+      "detail": "report_id=sample-issue-report-demo-cluster-bb3b075b4251d1fb, embedded_report_id=sample-issue-report-demo-cluster-bb3b075b4251d1fb, briefing_items=3, embedded_briefing_items=3, lead_label=economy / export"
+    },
+    {
+      "id": "anchor_cluster_ready",
+      "label": "Anchor cluster remains meeting-ready.",
+      "status": "pass",
+      "detail": "article_count=6, publisher_count=6, coverage_window_hours=4"
+    },
+    {
+      "id": "selection_reasons_present",
+      "label": "Sample issue report keeps explicit anchor rationale.",
+      "status": "pass",
+      "detail": "selection_reasons=3, readiness_score=0.922"
+    },
+    {
+      "id": "briefing_lead_watchlist",
+      "label": "Daily briefing lead item remains watchlist-linked.",
+      "status": "pass",
+      "detail": "lead_label=economy / export, watchlist_match=true, new_article_count=6"
+    },
+    {
+      "id": "briefing_depth",
+      "label": "Recurring report bundle keeps enough briefing depth for repeated delivery.",
+      "status": "pass",
+      "detail": "briefing_items=3"
+    },
+    {
+      "id": "starter_pack_guardrail",
+      "label": "Starter pack still keeps dashboard/API claims out of scope.",
+      "status": "pass",
+      "detail": "beta에서는 external API 판매, team dashboard, 월 정기구독을 약속하지 않습니다."
+    },
+    {
+      "id": "operator_follow_up_path",
+      "label": "Support flow can be reviewed before pilot delivery.",
+      "status": "warn",
+      "detail": "support_owner=founding team, beta_channel_status=draft"
+    }
+  ],
+  "next_actions": [
+    "Recurring report bundle is usable, but operator follow-up should confirm the support/contact path for this pilot.",
+    "For this low_volume_pilot run, finish ingest within 24h of handoff and keep reruns inside 12h when the corpus changes.",
+    "Review the generated sample issue report before any recurring client handoff.",
+    "Confirm the lead daily briefing item still reads clearly as a repeat-use angle.",
+    "Keep dashboard/API language out of the delivery deck unless a later gate explicitly unlocks it."
+  ]
+}

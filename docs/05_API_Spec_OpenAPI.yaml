@@ -1,0 +1,618 @@
+openapi: 3.1.0
+info:
+  title: News Context Layer API
+  version: 1.0.0
+  description: |
+    뉴스컨텍스트 v1/v1.5용 API 명세.
+    확장프로그램과 백엔드 간 계약을 정의한다.
+servers:
+  - url: https://api.newscontext.example.com
+    description: Production
+  - url: https://staging-api.newscontext.example.com
+    description: Staging
+
+tags:
+  - name: Resolve
+  - name: Watchlists
+  - name: Events
+  - name: Feedback
+  - name: Billing
+  - name: Briefings
+
+paths:
+  /v1/page/resolve:
+    post:
+      tags: [Resolve]
+      summary: Resolve current article into context data
+      operationId: resolvePageContext
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ResolveRequest'
+      responses:
+        '200':
+          description: Context resolved
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResolveResponse'
+        '400':
+          description: Invalid request
+        '429':
+          description: Rate limited
+        '500':
+          description: Server error
+
+  /v1/watchlists:
+    get:
+      tags: [Watchlists]
+      summary: List watchlists for current user/device
+      operationId: listWatchlists
+      parameters:
+        - in: header
+          name: X-User-Token
+          schema:
+            type: string
+          required: false
+        - in: header
+          name: X-Device-Id
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: Watchlist list
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  items:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/WatchlistItem'
+    post:
+      tags: [Watchlists]
+      summary: Save a story cluster to watchlist
+      operationId: createWatchlist
+      parameters:
+        - in: header
+          name: X-User-Token
+          schema:
+            type: string
+          required: false
+        - in: header
+          name: X-Device-Id
+          schema:
+            type: string
+          required: true
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateWatchlistRequest'
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/WatchlistItem'
+        '402':
+          description: Plan limit reached
+        '409':
+          description: Duplicate cluster
+
+  /v1/watchlists/{watchlistId}:
+    patch:
+      tags: [Watchlists]
+      summary: Update watchlist settings
+      operationId: updateWatchlist
+      parameters:
+        - in: path
+          name: watchlistId
+          required: true
+          schema:
+            type: string
+        - in: header
+          name: X-User-Token
+          schema:
+            type: string
+          required: false
+        - in: header
+          name: X-Device-Id
+          schema:
+            type: string
+          required: true
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateWatchlistRequest'
+      responses:
+        '200':
+          description: Updated
+    delete:
+      tags: [Watchlists]
+      summary: Delete watchlist
+      operationId: deleteWatchlist
+      parameters:
+        - in: path
+          name: watchlistId
+          required: true
+          schema:
+            type: string
+        - in: header
+          name: X-User-Token
+          schema:
+            type: string
+          required: false
+        - in: header
+          name: X-Device-Id
+          schema:
+            type: string
+          required: true
+      responses:
+        '204':
+          description: Deleted
+
+  /v1/briefings:
+    get:
+      tags: [Briefings]
+      summary: Get daily briefing for current user
+      operationId: getBriefing
+      parameters:
+        - in: header
+          name: X-User-Token
+          schema:
+            type: string
+          required: true
+        - in: query
+          name: date
+          schema:
+            type: string
+            format: date
+          required: false
+      responses:
+        '200':
+          description: Briefing data
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BriefingResponse'
+        '403':
+          description: Plan does not include briefing
+
+  /v1/events:
+    post:
+      tags: [Events]
+      summary: Track anonymous product event
+      operationId: createEvent
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EventRequest'
+      responses:
+        '202':
+          description: Accepted
+
+  /v1/feedback:
+    post:
+      tags: [Feedback]
+      summary: Submit user feedback
+      operationId: createFeedback
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/FeedbackRequest'
+      responses:
+        '201':
+          description: Created
+
+  /v1/checkout/session:
+    post:
+      tags: [Billing]
+      summary: Create checkout session
+      operationId: createCheckoutSession
+      parameters:
+        - in: header
+          name: X-User-Token
+          schema:
+            type: string
+          required: false
+        - in: header
+          name: X-Device-Id
+          schema:
+            type: string
+          required: true
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CheckoutSessionRequest'
+      responses:
+        '200':
+          description: Checkout session created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CheckoutSessionResponse'
+
+  /v1/me:
+    get:
+      tags: [Billing]
+      summary: Get current plan and profile
+      operationId: getCurrentProfile
+      parameters:
+        - in: header
+          name: X-User-Token
+          schema:
+            type: string
+          required: false
+        - in: header
+          name: X-Device-Id
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: Current profile
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProfileResponse'
+
+components:
+  schemas:
+    ResolveRequest:
+      type: object
+      required:
+        - url
+        - title
+        - parse_confidence
+      properties:
+        url:
+          type: string
+          format: uri
+        canonical_url:
+          type: string
+          format: uri
+          nullable: true
+        title:
+          type: string
+        publisher_name:
+          type: string
+          nullable: true
+        author_names:
+          type: array
+          items:
+            type: string
+        published_at:
+          type: string
+          format: date-time
+          nullable: true
+        modified_at:
+          type: string
+          format: date-time
+          nullable: true
+        article_type:
+          type: string
+          enum: [news, opinion, analysis, editorial, unknown]
+          default: unknown
+        section:
+          type: string
+          nullable: true
+        keywords:
+          type: array
+          items:
+            type: string
+        body_excerpt:
+          type: string
+          nullable: true
+        correction_note_detected:
+          type: boolean
+          default: false
+        parse_confidence:
+          type: number
+          format: float
+        anon_id:
+          type: string
+          nullable: true
+        page_lang:
+          type: string
+          default: ko
+
+    ResolveResponse:
+      type: object
+      required:
+        - article_id
+        - cluster_id
+        - context_confidence
+        - source_card
+        - related_articles
+        - disclaimer
+      properties:
+        article_id:
+          type: string
+        cluster_id:
+          type: string
+        context_confidence:
+          type: number
+        state:
+          type: string
+          enum: [success_full, success_partial, low_confidence, insufficient_results]
+        source_card:
+          $ref: '#/components/schemas/SourceCard'
+        freshness:
+          $ref: '#/components/schemas/Freshness'
+        common_signals:
+          $ref: '#/components/schemas/CommonSignals'
+        related_articles:
+          type: array
+          items:
+            $ref: '#/components/schemas/RelatedArticle'
+        ui_hints:
+          type: object
+          properties:
+            show_upgrade_cta:
+              type: boolean
+            show_feedback_prompt:
+              type: boolean
+        disclaimer:
+          type: string
+
+    SourceCard:
+      type: object
+      properties:
+        title:
+          type: string
+        publisher_name:
+          type: string
+        author_names:
+          type: array
+          items:
+            type: string
+        published_at:
+          type: string
+          format: date-time
+          nullable: true
+        modified_at:
+          type: string
+          format: date-time
+          nullable: true
+        article_type:
+          type: string
+        section:
+          type: string
+          nullable: true
+
+    Freshness:
+      type: object
+      properties:
+        state:
+          type: string
+          enum: [fresh, watch_newer, updated, older_context, unknown]
+        message:
+          type: string
+        newer_article_count:
+          type: integer
+          nullable: true
+        latest_article_ts:
+          type: string
+          format: date-time
+          nullable: true
+
+    CommonSignals:
+      type: object
+      properties:
+        entities:
+          type: array
+          items:
+            type: string
+        numbers:
+          type: array
+          items:
+            type: string
+        confidence:
+          type: number
+
+    RelatedArticle:
+      type: object
+      properties:
+        article_id:
+          type: string
+        url:
+          type: string
+          format: uri
+        publisher_name:
+          type: string
+        title:
+          type: string
+        published_at:
+          type: string
+          format: date-time
+          nullable: true
+        summary_line:
+          type: string
+          nullable: true
+        score:
+          type: number
+          nullable: true
+
+    CreateWatchlistRequest:
+      type: object
+      required:
+        - cluster_id
+      properties:
+        cluster_id:
+          type: string
+        label:
+          type: string
+          nullable: true
+        notifications_enabled:
+          type: boolean
+          default: true
+
+    UpdateWatchlistRequest:
+      type: object
+      properties:
+        label:
+          type: string
+        notifications_enabled:
+          type: boolean
+
+    WatchlistItem:
+      type: object
+      properties:
+        id:
+          type: string
+        cluster_id:
+          type: string
+        label:
+          type: string
+        notifications_enabled:
+          type: boolean
+        last_seen_at:
+          type: string
+          format: date-time
+        new_article_count:
+          type: integer
+        plan_limit_reached:
+          type: boolean
+
+    BriefingResponse:
+      type: object
+      properties:
+        date:
+          type: string
+          format: date
+        items:
+          type: array
+          items:
+            type: object
+            properties:
+              cluster_id:
+                type: string
+              label:
+                type: string
+              new_article_count:
+                type: integer
+              latest_articles:
+                type: array
+                items:
+                  $ref: '#/components/schemas/RelatedArticle'
+
+    EventRequest:
+      type: object
+      required:
+        - anon_id
+        - event_name
+        - ts
+      properties:
+        anon_id:
+          type: string
+        user_id:
+          type: string
+          nullable: true
+        event_name:
+          type: string
+        event_props:
+          type: object
+          additionalProperties: true
+        ts:
+          type: string
+          format: date-time
+
+    FeedbackRequest:
+      type: object
+      required:
+        - anon_id
+        - feedback_type
+        - ts
+      properties:
+        anon_id:
+          type: string
+        user_id:
+          type: string
+          nullable: true
+        article_id:
+          type: string
+          nullable: true
+        cluster_id:
+          type: string
+          nullable: true
+        feedback_type:
+          type: string
+          enum: [helpful, unrelated, outdated, missing_coverage, bug, free_text]
+        free_text:
+          type: string
+          nullable: true
+        ts:
+          type: string
+          format: date-time
+
+    CheckoutSessionRequest:
+      type: object
+      required:
+        - plan_code
+      properties:
+        plan_code:
+          type: string
+          enum: [founder_pass, pro_monthly, analyst_monthly]
+        success_url:
+          type: string
+          format: uri
+        cancel_url:
+          type: string
+          format: uri
+
+    CheckoutSessionResponse:
+      type: object
+      properties:
+        provider:
+          type: string
+        session_id:
+          type: string
+        checkout_url:
+          type: string
+          format: uri
+
+    ProfileResponse:
+      type: object
+      properties:
+        anon_id:
+          type: string
+        user_id:
+          type: string
+          nullable: true
+        plan:
+          type: object
+          properties:
+            code:
+              type: string
+              enum: [free, founder_pass, pro, analyst, team]
+            status:
+              type: string
+              enum: [inactive, active, expired, grace_period, refunded]
+            expires_at:
+              type: string
+              format: date-time
+              nullable: true
+        limits:
+          type: object
+          properties:
+            watchlists_max:
+              type: integer
+            watchlists_used:
+              type: integer
+            briefing_enabled:
+              type: boolean

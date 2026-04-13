@@ -1,0 +1,1 @@
+{"version":3,"file":"routes.d.ts","sourceRoot":"","sources":["../../src/sidepanel/routes.ts"],"names":[],"mappings":"AAAA,eAAO,MAAM,YAAY,qGAAsG,CAAC;AAEhI,MAAM,MAAM,UAAU,GAAG,CAAC,OAAO,YAAY,CAAC,CAAC,MAAM,CAAC,CAAC;AAEvD,eAAO,MAAM,oBAAoB,oDAAqD,CAAC;AAEvF,MAAM,MAAM,iBAAiB,GAAG,CAAC,OAAO,oBAAoB,CAAC,CAAC,MAAM,CAAC,CAAC;AAEtE,wBAAgB,mBAAmB,CAAC,mBAAmB,EAAE,OAAO,GAAG,UAAU,CAE5E"}

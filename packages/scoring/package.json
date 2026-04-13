@@ -1,0 +1,23 @@
+{
+  "name": "@news-context/scoring",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "dependencies": {
+    "@news-context/shared-types": "workspace:*"
+  },
+  "scripts": {
+    "build": "node ../../node_modules/typescript/bin/tsc -p ../shared-types/tsconfig.json && node ../../node_modules/typescript/bin/tsc -p tsconfig.json",
+    "lint": "corepack pnpm exec eslint --max-warnings=0 src tests",
+    "test": "corepack pnpm exec vitest run tests",
+    "typecheck": "corepack pnpm exec tsc --noEmit -p tsconfig.json"
+  }
+}

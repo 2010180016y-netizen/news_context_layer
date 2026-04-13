@@ -1,0 +1,17 @@
+section,value
+package_name,starter-report-beta-draft
+headline,"지금 읽는 기사에서 시작해, 다음 날 브리핑까지 이어지는 미팅용 베타 데모"
+subheadline,"대표 이슈 economy / export에서 6개 출처와 4시간 타임라인을 먼저 보여주고, 3개 briefing item으로 반복 사용 가치를 바로 연결합니다."
+immediate_value,"현재 읽는 기사 옆에서 같은 이슈의 다른 보도, 출처 카드, 최신성 신호를 바로 비교할 수 있다는 점을 먼저 보여줍니다."
+repeat_use_value,watchlist와 daily briefing scaffold가 한 번의 비교를 반복 확인 습관으로 바꾸는 구조라는 점을 이어서 설명합니다.
+founder_pass_reason,"Founder Pass는 더 많은 watchlist 저장과 briefing 접근을 열어, 개인 사용자가 이슈를 계속 추적할 이유를 만드는 베타 유료 옵션입니다."
+b2b_demo_value,"Starter Report는 economy, export 신호와 12, 48 수치가 여러 출처에서 반복됩니다. 파일 형태로 보여주는 초기 B2B 제안 자료입니다."
+scope_guardrail,"beta에서는 external API 판매, team dashboard, 월 정기구독을 약속하지 않습니다."
+sample_issue_report_id,sample-issue-report-demo-cluster-bb3b075b4251d1fb
+anchor_cluster_label,economy / export
+anchor_readiness_score,0.922
+anchor_reason_1,"6개 출처가 4시간 안에 같은 이슈를 이어 받아, 첫 데모에서 cross-source comparison 가치를 바로 보여주기에 가장 좋습니다."
+briefing_lead_angle,"economy / export: 6개 출처에서 오늘 새 기사 6건이 추가됐고, economy, export 신호가 반복되는 이슈, 수치 12, 48가 반복됩니다. watchlist와 직접 연결된 우선 추적 항목입니다."
+briefing_item_count,3
+support_owner,founding team
+support_sla,"Same business day acknowledgement, next-step response within 2 business days."

@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "dataset_name": "naver-parser-regression-baseline",
+  "description": "Parser regression fixture set for Naver article URLs. This dataset defines stable sample URL plus expected metadata contracts before parser implementation starts.",
+  "generated_at": "2026-04-10T03:20:00.000Z",
+  "capacity_target": 300,
+  "fixtures": [
+    {
+      "case_id": "naver-001-jsonld-complete",
+      "url": "https://n.news.naver.com/article/001/0015324001",
+      "expected_status": "success",
+      "expected_parser_path": "jsonld",
+      "tags": ["jsonld", "politics", "baseline"],
+      "notes": "Complete JSON-LD case used as the canonical parser happy-path regression sample.",
+      "assertions": {
+        "parse_confidence_min": 0.95,
+        "required_fields": ["title", "publisher_name", "author_names", "published_at", "modified_at", "article_type", "section", "keywords", "body_excerpt"]
+      },
+      "expected_metadata": {
+        "canonical_url": "https://n.news.naver.com/article/001/0015324001",
+        "title": "정부, 반도체 공급망 점검회의 개최",
+        "publisher_name": "연합뉴스",
+        "author_names": ["김민지"],
+        "published_at": "2026-04-01T01:30:00.000Z",
+        "modified_at": "2026-04-01T02:00:00.000Z",
+        "article_type": "news",
+        "section": "politics",
+        "keywords": ["반도체", "공급망", "정부"],
+        "body_excerpt": "정부가 반도체 공급망 점검회의를 열고 주요 품목 수급 상황과 대응 방안을 논의했다."
+      }
+    },
+    {
+      "case_id": "naver-002-meta-fallback",
+      "url": "https://n.news.naver.com/article/025/0003402002",
+      "expected_status": "success",
+      "expected_parser_path": "meta",
+      "tags": ["meta", "economy", "fallback"],
+      "notes": "Open Graph and meta tags remain usable even when structured data is incomplete.",
+      "assertions": {
+        "parse_confidence_min": 0.82,
+        "required_fields": ["title", "publisher_name", "published_at", "article_type", "section", "body_excerpt"]
+      },
+      "expected_metadata": {
+        "canonical_url": "https://n.news.naver.com/article/025/0003402002",
+        "title": "환율 변동성 확대에 수출기업 대응 고심",
+        "publisher_name": "중앙일보",
+        "author_names": ["이수연"],
+        "published_at": "2026-04-02T00:10:00.000Z",
+        "article_type": "analysis",
+        "section": "economy",
+        "keywords": ["환율", "수출", "기업"],
+        "body_excerpt": "원화 변동성이 커지면서 수출기업들이 환헤지 전략을 재점검하고 있다."
+      }
+    },
+    {
+      "case_id": "naver-003-dom-fallback-partial",
+      "url": "https://n.news.naver.com/article/032/0003357003",
+      "expected_status": "partial",
+      "expected_parser_path": "dom",
+      "tags": ["dom", "society", "partial"],
+      "notes": "DOM fallback case where metadata is recoverable but not all fields are guaranteed.",
+      "assertions": {
+        "parse_confidence_min": 0.64,
+        "required_fields": ["title", "publisher_name", "published_at", "body_excerpt"]
+      },
+      "expected_metadata": {
+        "title": "집중호우 이후 복구 작업 속도전",
+        "publisher_name": "경향신문",
+        "published_at": "2026-04-03T05:40:00.000Z",
+        "article_type": "news",
+        "section": "society",
+        "body_excerpt": "집중호우 피해 지역에서 복구 인력과 장비가 추가 투입되며 복구 작업이 이어지고 있다."
+      }
+    },
+    {
+      "case_id": "naver-004-multiple-authors",
+      "url": "https://n.news.naver.com/article/028/0002759004",
+      "expected_status": "success",
+      "expected_parser_path": "jsonld",
+      "tags": ["jsonld", "multiple-authors", "technology"],
+      "notes": "Multiple author extraction case for parser normalization and UI display testing.",
+      "assertions": {
+        "parse_confidence_min": 0.93,
+        "required_fields": ["title", "publisher_name", "author_names", "published_at", "article_type", "section", "keywords", "body_excerpt"]
+      },
+      "expected_metadata": {
+        "canonical_url": "https://n.news.naver.com/article/028/0002759004",
+        "title": "AI 반도체 투자 확대, 국내 생태계 재편 신호",
+        "publisher_name": "한겨레",
+        "author_names": ["박정은", "최윤서", "정도현"],
+        "published_at": "2026-04-03T23:20:00.000Z",
+        "modified_at": "2026-04-04T00:05:00.000Z",
+        "article_type": "analysis",
+        "section": "technology",
+        "keywords": ["AI", "반도체", "투자"],
+        "body_excerpt": "국내 AI 반도체 투자 확대가 소재와 설계, 패키징 생태계 전반의 재편 신호로 해석되고 있다."
+      }
+    },
+    {
+      "case_id": "naver-005-unsupported-title-missing",
+      "url": "https://n.news.naver.com/article/023/0003888005",
+      "expected_status": "unsupported",
+      "expected_parser_path": "dom",
+      "tags": ["unsupported", "title-missing", "edge-case"],
+      "notes": "Regression guard for layouts where title extraction fails and the parser must bail out cleanly.",
+      "assertions": {
+        "parse_confidence_min": 0,
+        "required_fields": []
+      },
+      "expected_metadata": null
+    },
+    {
+      "case_id": "naver-006-modified-before-published",
+      "url": "https://n.news.naver.com/article/421/0007489006",
+      "expected_status": "partial",
+      "expected_parser_path": "jsonld",
+      "tags": ["timestamp-edge", "modified-before-published", "world"],
+      "notes": "Timestamp anomaly case where modified_at is earlier than published_at and should be preserved for QA review.",
+      "assertions": {
+        "parse_confidence_min": 0.6,
+        "required_fields": ["title", "publisher_name", "published_at", "modified_at", "section", "body_excerpt"]
+      },
+      "expected_metadata": {
+        "canonical_url": "https://n.news.naver.com/article/421/0007489006",
+        "title": "해외 증시 급등락에 안전자산 선호 확대",
+        "publisher_name": "뉴스1",
+        "author_names": ["서지후"],
+        "published_at": "2026-04-04T09:00:00.000Z",
+        "modified_at": "2026-04-04T08:55:00.000Z",
+        "article_type": "news",
+        "section": "world",
+        "keywords": ["증시", "안전자산", "금리"],
+        "body_excerpt": "해외 증시 변동성이 커지면서 안전자산 선호 심리가 다시 강해지고 있다."
+      }
+    }
+  ]
+}

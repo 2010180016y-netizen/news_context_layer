@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="860" viewBox="0 0 420 860">
+    <rect x="0" y="0" width="420" height="860" fill="white" stroke="black"/>
+    <text x="20" y="30" font-family="Arial" font-size="20" font-weight="bold">WF-07 Error / Unsupported</text>
+    <rect x="20" y="50" width="380" height="40" fill="none" stroke="black"/>
+    <text x="30" y="75" font-family="Arial" font-size="14">Header / Chrome Side Panel</text>
+    
+<rect x="20" y="120" width="380" height="120" fill="none" stroke="black"/><text x="30" y="144" font-family="Arial" font-size="13">State illustration / icon</text>
+<rect x="20" y="270" width="380" height="70" fill="none" stroke="black"/><text x="30" y="294" font-family="Arial" font-size="13">State title + message</text>
+<rect x="20" y="370" width="380" height="50" fill="none" stroke="black"/><text x="30" y="394" font-family="Arial" font-size="13">Retry CTA</text>
+<rect x="20" y="440" width="380" height="50" fill="none" stroke="black"/><text x="30" y="464" font-family="Arial" font-size="13">Feedback CTA</text>
+<rect x="20" y="520" width="380" height="60" fill="none" stroke="black"/><text x="30" y="544" font-family="Arial" font-size="13">Supported pages link</text>
+</svg>

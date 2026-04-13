@@ -1,0 +1,16 @@
+{
+  "name": "@news-context/jobs",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@news-context/shared-types": "workspace:*"
+  },
+  "scripts": {
+    "build": "corepack pnpm exec tsc -p tsconfig.build.json",
+    "dev": "corepack pnpm exec tsx watch src/index.ts",
+    "lint": "corepack pnpm exec eslint --max-warnings=0 src tests",
+    "test": "corepack pnpm exec vitest run tests",
+    "typecheck": "corepack pnpm exec tsc --noEmit -p tsconfig.json"
+  }
+}

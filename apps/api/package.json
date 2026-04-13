@@ -1,0 +1,18 @@
+{
+  "name": "@news-context/api",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@news-context/jobs": "workspace:*",
+    "@news-context/scoring": "workspace:*",
+    "@news-context/shared-types": "workspace:*"
+  },
+  "scripts": {
+    "build": "node ../../node_modules/typescript/bin/tsc -p ../../packages/shared-types/tsconfig.json && node ../../node_modules/typescript/bin/tsc -p ../jobs/tsconfig.build.json && node ../../node_modules/typescript/bin/tsc -p ../../packages/scoring/tsconfig.json && node ../../node_modules/typescript/bin/tsc -p tsconfig.build.json",
+    "dev": "corepack pnpm exec tsx watch src/index.ts",
+    "lint": "corepack pnpm exec eslint --max-warnings=0 src tests",
+    "test": "corepack pnpm exec vitest run tests",
+    "typecheck": "corepack pnpm exec tsc --noEmit -p tsconfig.json"
+  }
+}

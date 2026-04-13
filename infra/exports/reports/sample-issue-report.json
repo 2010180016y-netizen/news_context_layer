@@ -1,0 +1,111 @@
+{
+  "report_id": "sample-issue-report-demo-cluster-bb3b075b4251d1fb",
+  "generated_at": "2026-04-10T23:30:00.000+09:00",
+  "report_type": "sample_issue_report",
+  "resolve_state": "success_full",
+  "cluster": {
+    "cluster_id": "demo-cluster-bb3b075b4251d1fb",
+    "label": "economy / export",
+    "status": "active",
+    "article_count": 6,
+    "publisher_count": 6,
+    "coverage_window_hours": 4,
+    "first_seen_at": "2026-04-10T00:20:00.000Z",
+    "last_seen_at": "2026-04-10T04:20:00.000Z",
+    "top_entities": [
+      "economy",
+      "export",
+      "license"
+    ],
+    "top_numbers": [
+      "12",
+      "48"
+    ]
+  },
+  "summary": {
+    "headline": "economy / export 이슈: 6개 출처가 4시간 안에 6건을 이어 쓴 대표 데모",
+    "angle": "이 샘플은 기사 비교의 즉시 가치를 가장 분명하게 보여주는 대표 이슈입니다. 6개 출처가 4시간 안에 같은 이슈를 이어 받아, 첫 데모에서 cross-source comparison 가치를 바로 보여주기에 가장 좋습니다. 공통 신호는 economy, export, license에 모이고, 반복 수치는 12, 48로 정리됩니다.",
+    "freshness_note": "보도 범위는 2026-04-10T00:20:00.000Z부터 2026-04-10T04:20:00.000Z까지이며, 가장 최근 추적 기사는 Digital Industry Desk에서 나왔습니다.",
+    "recommended_action": "첫 미팅에서는 이 이슈로 기사 비교의 즉시 가치를 보여준 뒤, watchlist와 daily briefing이 반복 사용으로 이어진다는 점까지 연결하세요. 현재 리포트 준비도 점수는 0.922이고, anchor 선택 이유는 center / data 묶음보다 출처 다양성과 readiness가 더 좋아, operator가 왜 이 이슈를 먼저 보여주는지 한 문장으로 설명하기 쉬운 anchor입니다.",
+    "common_signals": {
+      "entities": [
+        "economy",
+        "export",
+        "license"
+      ],
+      "numbers": [
+        "12",
+        "48"
+      ]
+    },
+    "selection_reason": {
+      "readiness_score": 0.922,
+      "reasons": [
+        "6개 출처가 4시간 안에 같은 이슈를 이어 받아, 첫 데모에서 cross-source comparison 가치를 바로 보여주기에 가장 좋습니다.",
+        "economy, export 신호와 12, 48 수치가 여러 출처에서 반복됩니다.",
+        "center / data 묶음보다 출처 다양성과 readiness가 더 좋아, operator가 왜 이 이슈를 먼저 보여주는지 한 문장으로 설명하기 쉬운 anchor입니다."
+      ]
+    }
+  },
+  "related_articles": [
+    {
+      "article_id": "demo-semi-001",
+      "url": "https://wire-korea.example/economy/semiconductor/001",
+      "publisher_name": "Wire Korea",
+      "title": "Seoul task force starts overnight semiconductor export license review after customs backlog",
+      "published_at": "2026-04-10T00:35:00.000Z",
+      "summary_line": "Officials started an overnight semiconductor export license review after 12 cargo lots stalled in customs and the backlog stretched toward 48 hours.",
+      "score": 1
+    },
+    {
+      "article_id": "demo-semi-002",
+      "url": "https://market-insight.example/economy/semiconductor/002",
+      "publisher_name": "Market Insight",
+      "title": "Chipmakers request semiconductor export license review as Seoul customs backlog grows",
+      "published_at": "2026-04-10T01:05:00.000Z",
+      "summary_line": "Chipmakers asked for three emergency license reviews after the semiconductor export queue grew beyond a 48 hour backlog.",
+      "score": 0.987
+    },
+    {
+      "article_id": "demo-semi-003",
+      "url": "https://industry-ledger.example/economy/semiconductor/003",
+      "publisher_name": "Industry Ledger",
+      "title": "Customs adds night desk to semiconductor export license backlog",
+      "published_at": "2026-04-10T01:35:00.000Z",
+      "summary_line": "Customs added a night desk to the semiconductor export license backlog after 12 lots remained stuck in queue.",
+      "score": 0.82
+    },
+    {
+      "article_id": "demo-semi-008",
+      "url": "https://digital-industry-watch.example/economy/semiconductor/008",
+      "publisher_name": "Digital Industry Desk",
+      "title": "Night-shift review team opens as semiconductor export license customs queue widens",
+      "published_at": "2026-04-10T04:20:00.000Z",
+      "summary_line": "A night-shift review team opened as the semiconductor export license customs queue widened beyond the original 12 lot estimate.",
+      "score": 0.815
+    },
+    {
+      "article_id": "demo-semi-004",
+      "url": "https://business-briefing.example/economy/semiconductor/004",
+      "publisher_name": "Capital Briefing",
+      "title": "Seoul maps 48-hour bottlenecks in semiconductor export license backlog",
+      "published_at": "2026-04-10T02:05:00.000Z",
+      "summary_line": "Seoul mapped the 48 hour bottlenecks inside the semiconductor export license backlog after suppliers flagged contract risk.",
+      "score": 0.768
+    }
+  ],
+  "export_paths": [
+    {
+      "purpose": "issue_report",
+      "format": "json",
+      "path": "infra/exports/reports/sample-issue-report.json",
+      "description": "내부 데모와 B2B 미팅용 sample issue report JSON."
+    },
+    {
+      "purpose": "issue_report",
+      "format": "csv",
+      "path": "infra/exports/reports/sample-issue-report.csv",
+      "description": "분석/공유용 handoff에 쓰는 sample issue report CSV."
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="860" viewBox="0 0 420 860">
+    <rect x="0" y="0" width="420" height="860" fill="white" stroke="black"/>
+    <text x="20" y="30" font-family="Arial" font-size="20" font-weight="bold">WF-06 Settings</text>
+    <rect x="20" y="50" width="380" height="40" fill="none" stroke="black"/>
+    <text x="30" y="75" font-family="Arial" font-size="14">Header / Chrome Side Panel</text>
+    
+<rect x="20" y="110" width="380" height="60" fill="none" stroke="black"/><text x="30" y="134" font-family="Arial" font-size="13">Analytics toggle</text>
+<rect x="20" y="190" width="380" height="60" fill="none" stroke="black"/><text x="30" y="214" font-family="Arial" font-size="13">Email briefing toggle</text>
+<rect x="20" y="270" width="380" height="50" fill="none" stroke="black"/><text x="30" y="294" font-family="Arial" font-size="13">Privacy policy link</text>
+<rect x="20" y="340" width="380" height="50" fill="none" stroke="black"/><text x="30" y="364" font-family="Arial" font-size="13">Terms of service link</text>
+<rect x="20" y="410" width="380" height="50" fill="none" stroke="black"/><text x="30" y="434" font-family="Arial" font-size="13">Disclaimer / About</text>
+<rect x="20" y="480" width="380" height="50" fill="none" stroke="black"/><text x="30" y="504" font-family="Arial" font-size="13">Contact support</text>
+</svg>

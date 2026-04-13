@@ -1,0 +1,16 @@
+{
+  "name": "@news-context/extension",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@news-context/shared-types": "workspace:*"
+  },
+  "scripts": {
+    "build": "node ./scripts/build-package.mjs",
+    "build:alpha": "node ./scripts/build-package.mjs --mode=alpha",
+    "lint": "corepack pnpm exec eslint --max-warnings=0 src tests scripts",
+    "test": "corepack pnpm exec vitest run tests",
+    "typecheck": "corepack pnpm exec tsc --noEmit -p tsconfig.json"
+  }
+}
